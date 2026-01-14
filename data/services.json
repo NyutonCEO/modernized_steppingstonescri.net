@@ -1,0 +1,206 @@
+[
+  {
+    "name": "Individual Outpatient Therapy",
+    "slug": "individual-outpatient-therapy",
+    "summary": "Weekly one-on-one counseling focused on recovery goals, coping skills, and long-term stability. Sessions are tailored to your needs and schedule.",
+    "body": "Individual outpatient therapy offers structured, private counseling while you continue daily responsibilities. Our clinicians collaborate with you to build practical strategies for relapse prevention, emotional regulation, and life balance.\n\nCare plans are reviewed regularly to ensure progress and accountability. You will receive compassionate, evidence-informed support that respects your pace and goals.",
+    "expectations": [
+      "Initial assessment to understand your history and goals",
+      "Personalized treatment plan with measurable milestones",
+      "Weekly or biweekly sessions based on clinical need",
+      "Ongoing coordination with case management when appropriate"
+    ],
+    "faqs": [
+      {
+        "question": "How long does outpatient therapy last?",
+        "answer": "Length varies by need, but many clients begin with 8-12 weeks and extend as goals evolve."
+      },
+      {
+        "question": "Can I combine therapy with other services?",
+        "answer": "Yes. Therapy can be paired with case management, primary care, or group services."
+      },
+      {
+        "question": "Is this confidential?",
+        "answer": "Yes. Your information is protected by privacy laws and our internal policies."
+      }
+    ],
+    "image": "/assets/service-placeholder.svg",
+    "metaDescription": "Individual outpatient therapy with personalized counseling, recovery planning, and flexible scheduling.",
+    "order": 1
+  },
+  {
+    "name": "Comprehensive Clinical Assessment",
+    "slug": "comprehensive-clinical-assessment",
+    "summary": "A full biopsychosocial assessment that clarifies diagnosis, treatment needs, and the right level of care. Includes screening tools and clinical recommendations.",
+    "body": "Our comprehensive clinical assessment provides a clear picture of your behavioral health, medical history, and recovery needs. Licensed clinicians use standardized tools and interviews to understand your strengths, risks, and goals.\n\nThe outcome is a recommended care plan that can include outpatient therapy, intensive services, or coordination with primary care. Assessments can also support referrals and insurance documentation.",
+    "expectations": [
+      "Detailed intake covering mental health, substance use, and medical history",
+      "Validated screening measures and clinical interviews",
+      "Review of current medications and prior treatment",
+      "Written recommendations for next steps"
+    ],
+    "faqs": [
+      {
+        "question": "How long does an assessment take?",
+        "answer": "Most assessments take 60-90 minutes, depending on complexity."
+      },
+      {
+        "question": "Do I need a referral?",
+        "answer": "No referral is required. You can self-schedule an assessment."
+      }
+    ],
+    "image": "/assets/service-placeholder.svg",
+    "metaDescription": "Comprehensive clinical assessments with evidence-based tools and clear treatment recommendations.",
+    "order": 2
+  },
+  {
+    "name": "SACOT",
+    "slug": "sacot",
+    "summary": "Substance Abuse Comprehensive Outpatient Treatment (SACOT) delivers structured, multi-week therapy and skills training while you live at home.",
+    "body": "SACOT is an intensive, structured outpatient program designed for clients who need more support than standard outpatient care. Services typically include group therapy, individual counseling, and education sessions.\n\nParticipants follow a consistent schedule that promotes accountability, recovery skills, and peer support. Our team coordinates care to address mental health, substance use, and life stability.",
+    "expectations": [
+      "Multiple weekly sessions with a consistent schedule",
+      "Group and individual therapy focused on recovery skills",
+      "Progress reviews and treatment plan adjustments",
+      "Coordination with family or support networks when appropriate"
+    ],
+    "faqs": [
+      {
+        "question": "Is SACOT the same as inpatient treatment?",
+        "answer": "No. SACOT is outpatient care, so you return home after sessions."
+      },
+      {
+        "question": "How long is the program?",
+        "answer": "Duration varies, but many clients participate for 8-16 weeks."
+      }
+    ],
+    "image": "/assets/service-placeholder.svg",
+    "metaDescription": "SACOT provides structured outpatient recovery support with therapy, education, and accountability.",
+    "order": 3
+  },
+  {
+    "name": "SAIOP",
+    "slug": "saiop",
+    "summary": "Substance Abuse Intensive Outpatient Program (SAIOP) offers focused therapy and education several times per week for sustained recovery.",
+    "body": "SAIOP is designed for individuals who need intensive support while maintaining work, school, or family responsibilities. Programming includes group therapy, relapse prevention, and skill-building sessions.\n\nOur clinicians tailor the plan to your needs and help you build a strong recovery foundation. We coordinate care with other services as needed.",
+    "expectations": [
+      "Structured weekly schedule with multiple sessions",
+      "Evidence-based group therapy and education",
+      "Individual check-ins to monitor progress",
+      "Relapse prevention planning and life skills coaching"
+    ],
+    "faqs": [
+      {
+        "question": "Who is a good fit for SAIOP?",
+        "answer": "Individuals who need more support than standard outpatient therapy but not residential care."
+      },
+      {
+        "question": "Can I work while in SAIOP?",
+        "answer": "Yes. Sessions are scheduled to support work and family commitments."
+      }
+    ],
+    "image": "/assets/service-placeholder.svg",
+    "metaDescription": "SAIOP delivers intensive outpatient care with therapy, education, and relapse prevention tools.",
+    "order": 4
+  },
+  {
+    "name": "Case Management",
+    "slug": "case-management",
+    "summary": "Coordinated support for housing, employment, transportation, benefits, and other stability needs that strengthen recovery.",
+    "body": "Case management helps you navigate the practical challenges that impact recovery. Our team connects you with community resources, social services, and long-term support.\n\nWe work alongside your clinical providers to ensure your care plan addresses real-life barriers. This service is especially helpful during transitions or after higher levels of care.",
+    "expectations": [
+      "Needs assessment and resource mapping",
+      "Coordination with community partners",
+      "Assistance with appointments and paperwork",
+      "Ongoing check-ins to track progress"
+    ],
+    "faqs": [
+      {
+        "question": "Does case management replace therapy?",
+        "answer": "No. It complements therapy by focusing on practical stability needs."
+      },
+      {
+        "question": "Can family members be involved?",
+        "answer": "Yes, with your consent, we can include supportive family members."
+      }
+    ],
+    "image": "/assets/service-placeholder.svg",
+    "metaDescription": "Case management connects you to housing, benefits, and community resources to support recovery.",
+    "order": 5
+  },
+  {
+    "name": "Primary Care",
+    "slug": "primary-care",
+    "summary": "Integrated primary care services to address physical health, chronic conditions, and preventive needs alongside recovery care.",
+    "body": "Primary care services help you manage overall wellness as part of recovery. We provide routine checkups, medication management, and preventive screenings.\n\nOur clinicians coordinate with behavioral health providers to deliver whole-person care. This integrated approach improves outcomes and supports long-term stability.",
+    "expectations": [
+      "Medical history review and wellness screening",
+      "Ongoing medication monitoring as needed",
+      "Preventive care and health education",
+      "Coordination with behavioral health services"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need to be in treatment to use primary care?",
+        "answer": "Not necessarily. Primary care is available based on eligibility and scheduling."
+      },
+      {
+        "question": "Will you coordinate with my existing doctor?",
+        "answer": "Yes, with your permission we can coordinate care plans."
+      }
+    ],
+    "image": "/assets/service-placeholder.svg",
+    "metaDescription": "Primary care services integrated with recovery support to address physical health and wellness.",
+    "order": 6
+  },
+  {
+    "name": "DWI Services",
+    "slug": "dwi-services",
+    "summary": "Education and intervention services designed to meet DWI requirements while supporting safer decision-making and recovery.",
+    "body": "DWI services include assessment, education, and support to help participants meet legal requirements and reduce risk. Our team delivers structured sessions focused on accountability, substance use education, and behavior change.\n\nWe also connect participants with additional treatment resources when indicated. The goal is to promote safer choices and long-term wellness.",
+    "expectations": [
+      "Screening to determine appropriate education level",
+      "Structured classes covering risk reduction",
+      "Completion documentation provided when requirements are met",
+      "Referrals to additional services if needed"
+    ],
+    "faqs": [
+      {
+        "question": "Will I receive proof of completion?",
+        "answer": "Yes. Documentation is provided after requirements are fulfilled."
+      },
+      {
+        "question": "Are these classes confidential?",
+        "answer": "Yes, we follow privacy standards while meeting reporting requirements."
+      }
+    ],
+    "image": "/assets/service-placeholder.svg",
+    "metaDescription": "DWI services with education, assessment, and documentation to meet requirements and support recovery.",
+    "order": 7
+  },
+  {
+    "name": "Payment Options / Accepted Insurance",
+    "slug": "payment-options-accepted-insurance",
+    "summary": "Clear information on self-pay options, insurance verification, and payment plans to help you start care quickly.",
+    "body": "We offer flexible payment options and work with many insurance plans to reduce barriers to care. Our team can verify benefits, explain coverage, and review potential out-of-pocket costs.\n\nIf you are paying out of pocket, we can discuss payment plans and available assistance. The goal is to make treatment accessible and transparent.",
+    "expectations": [
+      "Insurance verification and benefit review",
+      "Transparent cost estimates when available",
+      "Self-pay options and payment planning",
+      "Guidance on paperwork and approvals"
+    ],
+    "faqs": [
+      {
+        "question": "Which insurance plans do you accept?",
+        "answer": "Coverage varies. Contact us to verify your specific plan."
+      },
+      {
+        "question": "Can I start services before insurance is verified?",
+        "answer": "In many cases, yes. We will explain any financial responsibilities."
+      }
+    ],
+    "image": "/assets/service-placeholder.svg",
+    "metaDescription": "Payment options and accepted insurance guidance with transparent cost support.",
+    "order": 8
+  }
+]

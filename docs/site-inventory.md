@@ -1,0 +1,140 @@
+# Site Inventory
+
+Total URLs: 125
+
+## Counts by type
+- about: 6
+- archive: 6
+- contact: 4
+- home: 1
+- other: 74
+- post: 8
+- resource: 7
+- service: 19
+
+## URLs
+- https://steppingstonescri.net/ | Home | home | forms: false | blocks: none
+- https://steppingstonescri.net/1-column-portrait/ | 1 Column Portrait | other | forms: false | blocks: none
+- https://steppingstonescri.net/1-column/ | 1 Column | other | forms: false | blocks: none
+- https://steppingstonescri.net/2-column/ | 2 Column | other | forms: false | blocks: none
+- https://steppingstonescri.net/3-column-contact/ | 3 Column + Contact | contact | forms: true | blocks: form, slider, tabs
+- https://steppingstonescri.net/3-column-portrait/ | 3 Column Portrait | other | forms: false | blocks: none
+- https://steppingstonescri.net/3-column/ | 3 Column | other | forms: false | blocks: none
+- https://steppingstonescri.net/4-column/ | 4 Column | other | forms: false | blocks: none
+- https://steppingstonescri.net/accepted-insurance/ | Payment Options | service | forms: false | blocks: none
+- https://steppingstonescri.net/accordion/ | Accordion | other | forms: false | blocks: accordion
+- https://steppingstonescri.net/alert-boxes/ | Alert Boxes | other | forms: false | blocks: none
+- https://steppingstonescri.net/animated-features-list/ | Animated Features List | other | forms: false | blocks: none
+- https://steppingstonescri.net/animated-services-list/ | Animated Services List | other | forms: false | blocks: none
+- https://steppingstonescri.net/behavioral-mental-health/ | Behavioral/Mental Health | service | forms: false | blocks: none
+- https://steppingstonescri.net/blog/ | Blog | archive | forms: false | blocks: none
+- https://steppingstonescri.net/business-contact/ | Business Contact | contact | forms: false | blocks: none
+- https://steppingstonescri.net/buttons/ | Buttons | other | forms: false | blocks: none
+- https://steppingstonescri.net/callout-boxes/ | Callout Boxes | other | forms: false | blocks: none
+- https://steppingstonescri.net/careers/ | Careers | other | forms: true | blocks: form, pdf
+- https://steppingstonescri.net/cart/ | Cart | other | forms: false | blocks: none
+- https://steppingstonescri.net/case-management/ | Case Management | service | forms: false | blocks: none
+- https://steppingstonescri.net/case-managers/ | Case Managers | about | forms: false | blocks: none
+- https://steppingstonescri.net/category/clean-web-design/ | Clean Web Design | archive | forms: false | blocks: none
+- https://steppingstonescri.net/category/premium-wordpress-theme/ | premium-wordpress-theme | archive | forms: false | blocks: none
+- https://steppingstonescri.net/category/premium-wordpress-themes/ | Premium WordPress Themes | archive | forms: false | blocks: none
+- https://steppingstonescri.net/category/press-releases/ | Press Releases | archive | forms: false | blocks: none
+- https://steppingstonescri.net/category/uncategorized/ | Uncategorized | archive | forms: false | blocks: none
+- https://steppingstonescri.net/checkout/ | Checkout | other | forms: false | blocks: none
+- https://steppingstonescri.net/circle-loader-icon/ | Circle Loader Icon | other | forms: false | blocks: none
+- https://steppingstonescri.net/circle-loaders/ | Circle Loaders | other | forms: false | blocks: none
+- https://steppingstonescri.net/classic-4-column/ | Classic 4 Column | other | forms: false | blocks: slider
+- https://steppingstonescri.net/clinicians/ | Clinicians | about | forms: false | blocks: none
+- https://steppingstonescri.net/comprehensive-clinical-assessment/ | Comprehensive Clinical Assessment | service | forms: false | blocks: none
+- https://steppingstonescri.net/content-boxes/ | Content Boxes | other | forms: false | blocks: none
+- https://steppingstonescri.net/counselors/ | Facilitators | about | forms: false | blocks: none
+- https://steppingstonescri.net/dropcaps/ | Dropcaps | other | forms: false | blocks: none
+- https://steppingstonescri.net/dwi-2/ | DWI Services – Request An Appointment | service | forms: true | blocks: form
+- https://steppingstonescri.net/dwi-3/ | DWI | service | forms: false | blocks: none
+- https://steppingstonescri.net/dwi/ | DWI Services | service | forms: false | blocks: none
+- https://steppingstonescri.net/early-warning-signs-of-substance-abuse/ | Early Warning Signs of Substance Abuse | other | forms: false | blocks: none
+- https://steppingstonescri.net/events/ | Events | resource | forms: false | blocks: embed
+- https://steppingstonescri.net/faq-1/ | FAQ – 1 | resource | forms: false | blocks: accordion, gallery, slider
+- https://steppingstonescri.net/faq-2/ | FAQ – 2 | resource | forms: false | blocks: accordion, gallery, slider
+- https://steppingstonescri.net/full-width/ | Full Width | other | forms: false | blocks: tabs
+- https://steppingstonescri.net/ged-3/ | GED Services – Request An Appointment | service | forms: true | blocks: form
+- https://steppingstonescri.net/ged-4/ | GED | service | forms: false | blocks: none
+- https://steppingstonescri.net/ged/ | GED Services | service | forms: false | blocks: none
+- https://steppingstonescri.net/general-information-contact/ | General Information Contact | contact | forms: true | blocks: form
+- https://steppingstonescri.net/google-map/ | Google Map | other | forms: true | blocks: form
+- https://steppingstonescri.net/healthy-start-medical-transportation/ | Healthy Start Medical Transportation | other | forms: false | blocks: none
+- https://steppingstonescri.net/history/ | History | about | forms: false | blocks: none
+- https://steppingstonescri.net/horizontal-nav/ | Horizontal Nav | other | forms: false | blocks: none
+- https://steppingstonescri.net/icon-boxes/ | Icon Boxes | other | forms: false | blocks: none
+- https://steppingstonescri.net/icon-png/ | Icon PNG | other | forms: false | blocks: none
+- https://steppingstonescri.net/icon-text/ | Icon + Text | other | forms: false | blocks: none
+- https://steppingstonescri.net/image-box-round/ | Image Box – round | other | forms: false | blocks: none
+- https://steppingstonescri.net/image-box-square/ | Image Box – square | other | forms: false | blocks: none
+- https://steppingstonescri.net/individual-counseling/ | Individual Outpatient Therapy | service | forms: false | blocks: none
+- https://steppingstonescri.net/individual-outpatient-therapy-request-an-appointment/ | Individual Outpatient Therapy – Request An Appointment | service | forms: true | blocks: form
+- https://steppingstonescri.net/information-concerning-alcohol-and-driving-while-impaired/ | Information Concerning Alcohol and Driving While Impaired | post | forms: false | blocks: none
+- https://steppingstonescri.net/karma-jquery-1-slider/ | Karma jQuery 1 Slider | other | forms: false | blocks: slider
+- https://steppingstonescri.net/karma-jquery-2-slider/ | Karma jQuery 2 Slider | other | forms: false | blocks: slider
+- https://steppingstonescri.net/karma-jquery-3-slider/ | Karma jQuery 3 Slider | other | forms: false | blocks: slider
+- https://steppingstonescri.net/know-the-effect-of-peer-presence/ | Know! The Effect of Peer Presence | post | forms: false | blocks: pdf
+- https://steppingstonescri.net/latest-blog-posts/ | Latest Blog Posts | other | forms: false | blocks: none
+- https://steppingstonescri.net/layerslider/ | LayerSlider | other | forms: false | blocks: slider
+- https://steppingstonescri.net/left-nav-sidebar/ | Left Nav + Sidebar | other | forms: false | blocks: none
+- https://steppingstonescri.net/left-nav/ | Left Nav | other | forms: false | blocks: none
+- https://steppingstonescri.net/left-sidebar/ | Left Sidebar | other | forms: false | blocks: none
+- https://steppingstonescri.net/lists/ | Lists | other | forms: false | blocks: none
+- https://steppingstonescri.net/location/ | Location | other | forms: false | blocks: embed, map
+- https://steppingstonescri.net/medical-records-staff/ | Medical Records | other | forms: false | blocks: none
+- https://steppingstonescri.net/mission/ | Mission | about | forms: false | blocks: none
+- https://steppingstonescri.net/my-account/ | My Account | other | forms: false | blocks: none
+- https://steppingstonescri.net/newsletter/ | Newsletter | resource | forms: false | blocks: none
+- https://steppingstonescri.net/notices/ | Operational Information | other | forms: false | blocks: none
+- https://steppingstonescri.net/number-counters/ | Number Counters | other | forms: false | blocks: none
+- https://steppingstonescri.net/our-listings/ | Our Listings | other | forms: false | blocks: none
+- https://steppingstonescri.net/persons-served-rights-committee/ | Human Rights Committee | other | forms: true | blocks: form
+- https://steppingstonescri.net/press-releases/ | Press Releases | resource | forms: false | blocks: pdf
+- https://steppingstonescri.net/pricing-boxes/ | Pricing Boxes | other | forms: false | blocks: none
+- https://steppingstonescri.net/pricing/ | Pricing | other | forms: false | blocks: none
+- https://steppingstonescri.net/primary-care-location-office-hours/ | Primary Care – Location & Office Hours | other | forms: false | blocks: none
+- https://steppingstonescri.net/primary-care-payment-options/ | Primary Care – Payment Options | service | forms: false | blocks: none
+- https://steppingstonescri.net/primary-care-request-an-appointment/ | Primary Care – Request An Appointment | service | forms: true | blocks: form
+- https://steppingstonescri.net/primary-care-services/ | Primary Care – Services | service | forms: false | blocks: none
+- https://steppingstonescri.net/primary-care-support-staff/ | Primary Care – Support Staff | other | forms: false | blocks: none
+- https://steppingstonescri.net/primary-care/ | Primary Care – About Us | service | forms: false | blocks: none
+- https://steppingstonescri.net/progress-bars-vertical/ | Progress Bars (vertical) | other | forms: false | blocks: none
+- https://steppingstonescri.net/progress-bars/ | Progress Bars | other | forms: false | blocks: none
+- https://steppingstonescri.net/revolution-slider/ | Revolution Slider | other | forms: false | blocks: slider
+- https://steppingstonescri.net/right-nav-sidebar/ | Right Nav + Sidebar | other | forms: false | blocks: none
+- https://steppingstonescri.net/right-nav/ | Right Nav | other | forms: false | blocks: none
+- https://steppingstonescri.net/right-sidebar/ | Right Sidebar | other | forms: false | blocks: none
+- https://steppingstonescri.net/sacot/ | SACOT | service | forms: false | blocks: none
+- https://steppingstonescri.net/saiop/ | SAIOP | service | forms: false | blocks: none
+- https://steppingstonescri.net/sample-page/ | Sample Page | other | forms: false | blocks: none
+- https://steppingstonescri.net/sample-side-nav-image-frames/ | Sample – Side Nav + Image Frames | other | forms: false | blocks: none
+- https://steppingstonescri.net/shop/ | Shop | other | forms: false | blocks: none
+- https://steppingstonescri.net/signs-of-mental-health-problems/ | Early Warning Signs of Behavioral/Mental Health Disorder | other | forms: false | blocks: none
+- https://steppingstonescri.net/site-map-2/ | Site Map 2 | resource | forms: false | blocks: none
+- https://steppingstonescri.net/site-map/ | Site Map | resource | forms: false | blocks: none
+- https://steppingstonescri.net/smartphone/ | Smartphone | other | forms: true | blocks: form
+- https://steppingstonescri.net/social-icons/ | Social Icons | other | forms: false | blocks: none
+- https://steppingstonescri.net/spreading-seeds/ | Spreading Seeds | other | forms: false | blocks: none
+- https://steppingstonescri.net/stakeholder-surveys/ | Stakeholder Surveys | other | forms: false | blocks: none
+- https://steppingstonescri.net/stepping-stones-attends-the-nc-substance-abuse-prevention-conference/ | Stepping Stones attends the NC Substance Abuse Prevention Conference | post | forms: false | blocks: none
+- https://steppingstonescri.net/stepping-stones-attends-the-wilson-nc-recovery-rally/ | Stepping Stones attends the Wilson NC Recovery Rally | post | forms: false | blocks: none
+- https://steppingstonescri.net/stepping-stones-community-resources-dwi-services/ | Stepping Stones Community Resources DWI Services | post | forms: false | blocks: none
+- https://steppingstonescri.net/stepping-stones-community-resources-karlesia-montague-has-written-an-article-in-the-field-of-mental-health/ | Stepping Stones Community Resources Karlesia Montague has written an article in the field of Mental Health | post | forms: false | blocks: pdf
+- https://steppingstonescri.net/strategic-plan-2023-24/ | STRATEGIC PLAN 2023-24 | other | forms: false | blocks: slider
+- https://steppingstonescri.net/substance-abuse-and-mental-health-information/ | Substance Abuse and Behavioral/Mental Health Information | other | forms: false | blocks: pdf
+- https://steppingstonescri.net/substance-abuse/ | Substance Abuse | service | forms: false | blocks: none
+- https://steppingstonescri.net/substance-abusemental-health-contact/ | Substance Abuse and Behavioral/Mental Health  – Request An Appointment | contact | forms: true | blocks: form
+- https://steppingstonescri.net/support/ | IT Support | other | forms: true | blocks: form
+- https://steppingstonescri.net/tabs-4-styles/ | Tabs (4 styles) | other | forms: false | blocks: tabs
+- https://steppingstonescri.net/team-members/ | Team Members | about | forms: false | blocks: none
+- https://steppingstonescri.net/testimonials-1/ | Testimonials 1 | other | forms: false | blocks: slider
+- https://steppingstonescri.net/testimonials-2-3/ | Testimonials 2 + 3 | other | forms: false | blocks: slider
+- https://steppingstonescri.net/the-scoop-on-managing-stress/ | The SCOOP on Managing Stress | post | forms: false | blocks: none
+- https://steppingstonescri.net/today-we-celebrate-juneteenth/ | Today We Celebrate Juneteenth | post | forms: false | blocks: none
+- https://steppingstonescri.net/video-left-2/ | Video Left | other | forms: false | blocks: embed, tabs
+- https://steppingstonescri.net/video-left/ | Video Left | other | forms: true | blocks: embed, form
+- https://steppingstonescri.net/video-right-2/ | Video Right | other | forms: true | blocks: embed, form
+- https://steppingstonescri.net/video-right/ | Video Right | other | forms: false | blocks: embed, slider

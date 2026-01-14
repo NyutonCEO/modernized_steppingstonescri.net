@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Get Help",
+    "summary": "Are you struggling with substance abuse, addiction, depression, thoughts of suicide?",
+    "image": "/assets/slider-placeholder.svg",
+    "ctaText": "Get Help",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "title": "You Are Not Alone",
+    "summary": "With Us you are never alone!",
+    "image": "/assets/slider-placeholder.svg",
+    "ctaText": "Get Help",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "title": "Start Your Real Life",
+    "summary": "Start your treatment today and start your REAL LIFE!",
+    "image": "/assets/slider-placeholder.svg",
+    "ctaText": "Get Help",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "title": "DWI? Get Back On The Road",
+    "summary": "Our\u00a0DWI Services can help\u00a0you get back on the road today!",
+    "image": "/assets/slider-placeholder.svg",
+    "ctaText": "Get Help",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "title": "Stepping Stones Community Resources",
+    "summary": "Let us be the key to your\u00a0SUCCESS!",
+    "image": "/assets/slider-placeholder.svg",
+    "ctaText": "Get Help",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "title": "Substance Abuse Treatment",
+    "summary": "Don\u2019t fight Substance Abuse alone. Call Us\u00a0today and get started on you path to recovery.",
+    "image": "/assets/slider-placeholder.svg",
+    "ctaText": "Get Help",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "title": "Behavioral/Mental Health Treatment",
+    "summary": "Don\u2019t fight Behavioral/Mental Health disorders alone. Call Us\u00a0today and get started on you path to recovery.",
+    "image": "/assets/slider-placeholder.svg",
+    "ctaText": "Get Help",
+    "ctaUrl": "/general-information-contact/"
+  }
+]

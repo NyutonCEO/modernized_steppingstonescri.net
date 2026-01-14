@@ -1,0 +1,32 @@
+[
+  {
+    "id": 15,
+    "name": "Clean Web Design",
+    "slug": "clean-web-design",
+    "count": 0
+  },
+  {
+    "id": 16,
+    "name": "Premium WordPress Themes",
+    "slug": "premium-wordpress-themes",
+    "count": 0
+  },
+  {
+    "id": 22,
+    "name": "premium-wordpress-theme",
+    "slug": "premium-wordpress-theme",
+    "count": 0
+  },
+  {
+    "id": 7,
+    "name": "Press Releases",
+    "slug": "press-releases",
+    "count": 8
+  },
+  {
+    "id": 1,
+    "name": "Uncategorized",
+    "slug": "uncategorized",
+    "count": 0
+  }
+]

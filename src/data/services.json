@@ -1,0 +1,374 @@
+[
+  {
+    "name": "Individual Outpatient Therapy",
+    "url": "https://steppingstonescri.net/individual-counseling/",
+    "summary": "Individual Outpatient Therapy is a specialized treatment that is personalized to the needs of the individual and recognizes the importance of the individual. We provide quality treatment in areas of anger management, mood disorders, anxiety disorders, attention deficit hyperactivity disorders (ADHD), behavioral disorders, post-traumatic stress disorder (PTSD), stress management, substance abuse disorders, gambling addiction disorders, eating disorders, and obsessive-compulsive disorders.",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/individual-counseling/",
+    "slug": "individual-counseling",
+    "order": 1,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start Individual Outpatient Therapy?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "name": "Comprehensive Clinical Assessment",
+    "url": "https://steppingstonescri.net/comprehensive-clinical-assessment/",
+    "summary": "Each person is assessed to appropriately identify his/her needs/problems and if appropriate, the needs of the family of the person. A clinical screening/assessment/evaluation is conducted on each individual who presents himself/herself for services and/or is referred for assessment, treatment, or evaluation to determine appropriateness for admission and disposition/referral for additional treatment services.",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/comprehensive-clinical-assessment/",
+    "slug": "comprehensive-clinical-assessment",
+    "order": 2,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start Comprehensive Clinical Assessment?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "name": "SACOT",
+    "url": "https://steppingstonescri.net/sacot/",
+    "summary": "Substance Abuse Counseling Outpatient Treatment (SACOT) is a structured individual and group addiction activities and services that are provided at an outpatient program designed to assist adults and adolescents to begin recovery and learn skills for recovery maintenance. The program is offered at least 4 hours a day, at least 4 days a week, no more than 7 days a week with no more than 2 consecutive days between offered services, and distinguishes between those individuals needing more than 20 hours of structured services per week.",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/sacot/",
+    "slug": "sacot",
+    "order": 3,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start SACOT?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "name": "SAIOP",
+    "url": "https://steppingstonescri.net/saiop/",
+    "summary": "Substance Abuse Intensive Outpatient Program (SAIOP) is a\u00a0structured individual and group addiction activities and services that are provided at an outpatient program with the goals of assisting adults and adolescents\u00a0to begin recovery and learn life skills for recovery maintenance. The program is offered at least 3 hours a day, at least 3 days a week, with no more than 2 consecutive days between offered services, and distinguishes between those individuals needing no more than 15 hours of structured services per week.",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/saiop/",
+    "slug": "saiop",
+    "order": 4,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start SAIOP?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "name": "Case Management",
+    "url": "https://steppingstonescri.net/case-management/",
+    "summary": "Case Management is a service for adults, women who are pregnant and children age three (3) and older who have a serious emotional disturbance, mental illness, or a substance abuse related disorder. Case Management assists recipients in gaining access to necessary care and medical, behavioral, social, housing and other services appropriate to their needs.",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/case-management/",
+    "slug": "case-management",
+    "order": 5,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start Case Management?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "name": "Primary Care \u2013 About Us",
+    "url": "https://steppingstonescri.net/primary-care/",
+    "summary": "Stepping Stones Primary Care is committed to being the main point of contact for continuing care for patients within our health care system. We are dedicated to health promotion, disease prevention, health maintenance, counseling, patient education, diagnosis, and treatment.",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/primary-care/",
+    "slug": "primary-care",
+    "order": 6,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start Primary Care \u2013 About Us?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "name": "Primary Care \u2013 Support Staff",
+    "url": "https://steppingstonescri.net/primary-care-support-staff/",
+    "summary": "[vc_row][vc_column][vc_column_text css=\u201d\u201d]\n[/vc_column_text][/vc_column][/vc_row]",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/primary-care-support-staff/",
+    "slug": "primary-care-support-staff",
+    "order": 7,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start Primary Care \u2013 Support Staff?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "name": "Primary Care \u2013 Location & Office Hours",
+    "url": "https://steppingstonescri.net/primary-care-location-office-hours/",
+    "summary": "LOCATION\u00a0OFFICE 1760 Parkwood Blvd West Wilson NC 27893 (252) 991-7009 / 7010 (252) 991-7011 fax HOURS Monday - 8:00 am - 2:00 pm Tuesday thru Thursday - 8:00 am - 4:00 pm Friday - 8:00 am - 2:00 pm Closed Weekends \u00a0 Request An Appointment \u00a0 Quality Care You\u2019re in good hands, so make your [...]",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/primary-care-location-office-hours/",
+    "slug": "primary-care-location-office-hours",
+    "order": 8,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start Primary Care \u2013 Location & Office Hours?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "name": "Primary Care \u2013 Services",
+    "url": "https://steppingstonescri.net/primary-care-services/",
+    "summary": "OUR SERVICES Preventive Care Well Child Exams, School and Sports Physicals Immunizations Adult Physicals, including Work Physicals Appropriate Screenings (such as: Pap Smears, Mammograms, Colonoscopies, Prostate Cancer) Management of Acute Problems Management of Chronic Illnesses WE CAN HELP YOU WITH: Blood Pressure Cholesterol Diabetes Nutrition Thyroid Problems Asthma Seasonal Allergies Flu or Pneumonia Depression or [...]",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/primary-care-services/",
+    "slug": "primary-care-services",
+    "order": 9,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start Primary Care \u2013 Services?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "name": "Primary Care \u2013 Payment Options",
+    "url": "https://steppingstonescri.net/primary-care-payment-options/",
+    "summary": "PAYMENT OPTIONS\nWe accept NC Medicaid, Medicare, Tricare, Cigna, Aetna, Blue Cross Blue Shield, Self-Pay, Cash and all Major Credit Cards. We accept Patients without Insurance.",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/primary-care-payment-options/",
+    "slug": "primary-care-payment-options",
+    "order": 10,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start Primary Care \u2013 Payment Options?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "name": "DWI Services",
+    "url": "https://steppingstonescri.net/dwi/",
+    "summary": "Did you get a DWI or a Criminal Drug Charge? Well, you&#8217;ve come to the right place!",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/dwi/",
+    "slug": "dwi",
+    "order": 11,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start DWI Services?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  },
+  {
+    "name": "Payment Options",
+    "url": "https://steppingstonescri.net/accepted-insurance/",
+    "summary": "We accept the following:\n\nNC Medicaid\nNC Medicaid Managed Care\n\nCarolina Complete Health, Inc\nHealthy Blue\nAmeriHealth\nWellCare\n\n\nBlue Cross Blue Shield\nCigna\nAetna\nHumana\nTri Care\n\n\n\n&nbsp;\n&nbsp;",
+    "image": "/assets/service-placeholder.svg",
+    "path": "/accepted-insurance/",
+    "slug": "accepted-insurance",
+    "order": 12,
+    "expectations": [
+      "Personalized intake to understand your goals and needs",
+      "Clear care plan with measurable milestones",
+      "Coordinated support from our clinical team",
+      "Regular progress check-ins and adjustments"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start Payment Options?",
+        "answer": "Call us or request an appointment and our team will guide you through next steps."
+      },
+      {
+        "question": "Do you accept insurance?",
+        "answer": "We can verify benefits and review coverage options before you begin."
+      },
+      {
+        "question": "What does scheduling look like?",
+        "answer": "We offer flexible scheduling based on clinical needs and availability."
+      }
+    ],
+    "ctaText": "Request Appointment",
+    "ctaUrl": "/general-information-contact/"
+  }
+]
