@@ -48,6 +48,14 @@ See `docs/hosting-google.md` for setup and DNS steps.
 - `src/data/hero-slider.json`: Home hero slider content
 - `src/data/site.json`: Global info like phone and contact URL
 - `src/data/siteConfig.json`: Single source for phone display/tel
+- `src/data/asset-map.json`: Maps remote media URLs to local assets
+
+## SEO + structured data
+
+- Meta titles/descriptions are generated in `scripts/build.js` using `page.title`, `page.excerpt`, and `page.content`.
+- Homepage meta title/description, FAQ content, and JSON-LD schema are defined in `scripts/build.js` (search for `metaOverrides` and `renderHomeFaq`).
+- Homepage structured data (LocalBusiness/MedicalOrganization + FAQ + OfferCatalog) is defined in `scripts/build.js`.
+- Social links for schema are pulled from `src/data/nav.json` footer items.
 
 ## Add a new service
 
@@ -65,6 +73,14 @@ See `docs/hosting-google.md` for setup and DNS steps.
 - The build generates static HTML files in both `src/pages/` and `dist/` to keep sources organized and outputs ready for deployment.
 - The link checker verifies internal links in `dist/` and fails if any are missing.
 - The QA checker validates metadata, canonical tags, phone CTA presence, and image locality.
+
+## Navigation + header updates
+
+- Edit header/footer nav links in `src/data/nav.json`.
+- Update the phone number in `src/data/siteConfig.json` (display + tel) and `src/data/site.json`.
+- Update the appointment URL in `src/data/site.json` (`contactUrl`).
+- Glass header styles and breakpoints live in `src/assets/styles.css` under `.site-header` and the `@media (max-width: 1024px)` block.
+- The mobile sticky call CTA is rendered in `scripts/build.js` (search for `mobile-call-bar`).
 
 
 ## Update recent posts faster
