@@ -1,0 +1,80 @@
+# Page Audit Report
+
+All pages were reviewed using the launch checklist. Global template improvements apply to every route:
+
+- Unique title, sanitized meta description, canonical URL, OG/Twitter meta, JSON-LD schema.
+- Above-the-fold Call Now CTA on high-intent pages via hero CTA.
+- Consistent Call Now CTA blocks and What happens when you call on high-intent pages.
+- WP shortcodes stripped from page/post content output.
+- Images mapped to local assets; missing sources replaced with placeholders.
+
+## Page-by-page checklist
+
+- / - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /accepted-insurance/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /behavioral-mental-health/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /business-contact/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /careers/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /case-management/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /case-managers/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /category/clean-web-design/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /category/premium-wordpress-theme/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /category/premium-wordpress-themes/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /category/press-releases/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /category/uncategorized/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /clinicians/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /comprehensive-clinical-assessment/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /counselors/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /dwi-2/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /dwi-3/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /dwi/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /early-warning-signs-of-substance-abuse/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /events/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /garysburg-nc/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /ged-3/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /ged-4/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /ged/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /general-information-contact/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /healthy-start-medical-transportation/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /history/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /individual-counseling/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /individual-outpatient-therapy-request-an-appointment/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /information-concerning-alcohol-and-driving-while-impaired/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /know-the-effect-of-peer-presence/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /lake-benson-nc/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /location/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /locations/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /medical-records-staff/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /mission/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /newsletter/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /notices/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /our-listings/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /persons-served-rights-committee/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /press-releases/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /primary-care-location-office-hours/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /primary-care-payment-options/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /primary-care-request-an-appointment/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /primary-care-services/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /primary-care-support-staff/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /primary-care/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /resources/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /rocky-mount-nc/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /sacot/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /saiop/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /services/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /signs-of-mental-health-problems/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /spreading-seeds/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /stakeholder-surveys/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /stepping-stones-attends-the-nc-substance-abuse-prevention-conference/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /stepping-stones-attends-the-wilson-nc-recovery-rally/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /stepping-stones-community-resources-dwi-services/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /stepping-stones-community-resources-karlesia-montague-has-written-an-article-in-the-field-of-mental-health/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /strategic-plan-2023-24/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /strategic-plan-2025-2026/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /substance-abuse-and-mental-health-information/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /substance-abuse/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /substance-abusemental-health-contact/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /support/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /the-scoop-on-managing-stress/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /today-we-celebrate-juneteenth/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.
+- /wilson-nc/ - Meta/canonical validated; CTA present; content sanitized; internal links verified.

@@ -28,11 +28,24 @@ const cleanUrl = (url) => {
 };
 
 const stripTags = (html) => html.replace(/<[^>]+>/g, '').trim();
+const toMetaDescription = (text, fallbackTitle) => {
+  const stripped = stripTags(text || '').replace(/\s+/g, ' ').trim();
+  if (!stripped) {
+    return `Learn about ${fallbackTitle} from Stepping Stones Community Resources.`;
+  }
+  if (stripped.length <= 155) return stripped;
+  return stripped.slice(0, 152).trim() + '...';
+};
 let assetMap = {};
+let siteConfig = {
+  sitePhoneDisplay: '(919) 269-9300',
+  sitePhoneTel: '+19192699300'
+};
 
 const sanitizeContent = (html) => {
   if (!html) return '';
   let content = html;
+  content = content.replace(/\[(\/)?[a-zA-Z0-9_-]+[^\]]*\]/g, '');
   content = content.replace(/<script[\s\S]*?<\/script>/gi, '');
   content = content.replace(/<style[\s\S]*?<\/style>/gi, '');
   content = content.replace(/(href|src)=["']\s+\//g, '$1="/');
@@ -51,6 +64,17 @@ const sanitizeContent = (html) => {
   });
   Object.entries(assetMap).forEach(([remote, local]) => {
     content = content.split(remote).join(local);
+  });
+  const phonePatterns = [
+    /\(919\)\s*269-9300/g,
+    /919-269-9300/g,
+    /919\.269\.9300/g
+  ];
+  phonePatterns.forEach((pattern) => {
+    content = content.replace(pattern, siteConfig.sitePhoneDisplay);
+  });
+  content = content.replace(/<img(?![^>]*\salt=)[^>]*>/gi, (match) => {
+    return match.replace('<img', '<img alt="Stepping Stones Community Resources photo"');
   });
   return content;
 };
@@ -84,6 +108,7 @@ const renderHeader = (nav, site) => {
       <img src="/assets/SteppingStonesLogo3.png" alt="${site.name} logo">
     </a>
     <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <a class="btn btn-primary header-cta" href="tel:${siteConfig.sitePhoneTel}" aria-label="Call ${siteConfig.sitePhoneDisplay}">Call Now</a>
     <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
       ${navItems(nav)}
     </nav>
@@ -108,7 +133,8 @@ const renderFooter = (site, sections) => {
   <div class="container footer-inner">
     <div class="footer-brand">
       <h4>${site.name}</h4>
-      <p>Call ${site.phone}</p>
+      <p><a href="tel:${siteConfig.sitePhoneTel}">Call ${siteConfig.sitePhoneDisplay}</a></p>
+      <p class="footer-disclaimer">If this is an emergency, call 911 or go to your nearest emergency room.</p>
     </div>
     <div class="footer-grid">
       ${columns}
@@ -117,8 +143,34 @@ const renderFooter = (site, sections) => {
 </footer>`;
 };
 
-const renderLayout = ({ title, description, body, pageClass = '' }) => {
+const renderLayout = ({ title, description, body, pageClass = '', canonicalPath = '/', ogTitle = '', ogDescription = '' }) => {
   const metaDesc = description ? `<meta name="description" content="${description}">` : '';
+  const canonical = `${BASE_URL}${canonicalPath}`;
+  const shareTitle = ogTitle || title;
+  const shareDesc = ogDescription || description || '';
+  const shareImage = `${BASE_URL}/assets/SteppingStonesLogo3.png`;
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    name: "Stepping Stones Community Resources, Inc.",
+    url: BASE_URL,
+    logo: shareImage,
+    telephone: siteConfig.sitePhoneDisplay,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.sitePhoneDisplay,
+        contactType: "customer service",
+        areaServed: "US"
+      }
+    ],
+    areaServed: [
+      { "@type": "City", "name": "Wilson, NC" },
+      { "@type": "City", "name": "Rocky Mount, NC" },
+      { "@type": "City", "name": "Garysburg, NC" },
+      { "@type": "City", "name": "Lake Benson, NC" }
+    ]
+  };
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -126,11 +178,25 @@ const renderLayout = ({ title, description, body, pageClass = '' }) => {
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>${title}</title>
   ${metaDesc}
+  <link rel="canonical" href="${canonical}">
+  <meta property="og:title" content="${shareTitle}">
+  <meta property="og:description" content="${shareDesc}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${canonical}">
+  <meta property="og:image" content="${shareImage}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${shareTitle}">
+  <meta name="twitter:description" content="${shareDesc}">
+  <meta name="twitter:image" content="${shareImage}">
   <link rel="stylesheet" href="/assets/styles.css">
+  <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body class="${pageClass}">
   <a class="skip-link" href="#main-content">Skip to content</a>
   ${body}
+  <div class="mobile-call-bar" role="region" aria-label="Call Stepping Stones">
+    <a href="tel:${siteConfig.sitePhoneTel}" class="btn btn-primary">Call ${siteConfig.sitePhoneDisplay}</a>
+  </div>
   <script src="/assets/site.js" defer></script>
 </body>
 </html>`;
@@ -146,7 +212,7 @@ const renderHeroSlider = (slides) => {
         <p class="hero-kicker">Stepping Stones</p>
         <h2>${slide.title}</h2>
         <p>${slide.summary}</p>
-        <a class="btn btn-primary" href="${slide.ctaUrl}">${slide.ctaText}</a>
+        <a class="btn btn-primary" href="tel:${siteConfig.sitePhoneTel}">Call Now</a>
       </div>
     </article>`;
   }).join('');
@@ -269,6 +335,60 @@ const renderValueSlider = (cards) => {
 </section>`;
 };
 
+const renderCallProcess = () => {
+  return `
+<section class="call-process">
+  <div class="container">
+    <h2>What happens when you call</h2>
+    <ol>
+      <li>We listen to what you need and answer immediate questions.</li>
+      <li>We review options and explain the next steps.</li>
+      <li>If you want to move forward, we schedule an appointment.</li>
+    </ol>
+  </div>
+</section>`;
+};
+
+const renderRelatedLinks = () => {
+  const serviceLinks = filteredServices.map((service) => {
+    return `<li><a href="${service.path}">${service.name}</a></li>`;
+  }).join('');
+  const locationLinks = [
+    { title: 'Wilson, NC', url: '/wilson-nc/' },
+    { title: 'Rocky Mount, NC', url: '/rocky-mount-nc/' },
+    { title: 'Garysburg, NC', url: '/garysburg-nc/' },
+    { title: 'Lake Benson, NC', url: '/lake-benson-nc/' }
+  ].map((loc) => `<li><a href="${loc.url}">${loc.title}</a></li>`).join('');
+  return `
+<section class="related-links">
+  <div class="container">
+    <div>
+      <h2>Related services</h2>
+      <ul>${serviceLinks}</ul>
+    </div>
+    <div>
+      <h2>Service areas</h2>
+      <ul>${locationLinks}</ul>
+    </div>
+  </div>
+</section>`;
+};
+const shouldIncludeCallProcess = (urlPath) => {
+  if (urlPath === '/' || urlPath === '/services/' || urlPath === '/resources/') return true;
+  const highIntentPrefixes = [
+    '/individual-outpatient-therapy-request-an-appointment/',
+    '/substance-abusemental-health-contact/',
+    '/primary-care-request-an-appointment/',
+    '/dwi-2/',
+    '/general-information-contact/'
+  ];
+  if (highIntentPrefixes.includes(urlPath)) return true;
+  const slug = urlPath.replace(/^\/|\/$/g, '');
+  if (allowedServiceSlugs.has(slug)) return true;
+  if (urlPath.endsWith('-nc/')) return true;
+  return false;
+};
+
 const renderServicesIndex = (services) => {
   const cards = services.map((service) => {
     return `
@@ -343,6 +463,12 @@ const renderServiceDetail = (service, pageContent) => {
     <img src="${service.image}" alt="${service.name}">
   </div>
 </section>
+<section class="service-areas">
+  <div class="container">
+    <h2>Serving our North Carolina communities</h2>
+    <p>We support individuals and families in Wilson, Rocky Mount, Garysburg, and Lake Benson. Call to learn which service option fits your needs.</p>
+  </div>
+</section>
 <section class="content-section">
   <div class="container">
     ${pageContent}
@@ -397,6 +523,10 @@ const site = readJson(path.join(dataDir, 'site.json'));
 const assetMapPath = path.join(dataDir, 'asset-map.json');
 if (fs.existsSync(assetMapPath)) {
   assetMap = readJson(assetMapPath);
+}
+const siteConfigPath = path.join(dataDir, 'siteConfig.json');
+if (fs.existsSync(siteConfigPath)) {
+  siteConfig = readJson(siteConfigPath);
 }
 
 const allowedServiceSlugs = new Set([
@@ -520,11 +650,11 @@ ensureDir(sourcePostsDir);
 copyDir(assetsDir, path.join(distDir, 'assets'));
 copyDir(assetsDir, path.join(sourcePagesDir, 'assets'));
 
-const renderBasePage = ({ title, description, content, pageClass, footerSections }) => {
+const renderBasePage = ({ title, description, content, pageClass, footerSections, canonicalPath }) => {
   const header = renderHeader(nav.header, site);
   const footer = renderFooter(site, footerSections);
   const body = `${header}\n<main id="main-content">${content}</main>\n${footer}`;
-  return renderLayout({ title, description, body, pageClass });
+  return renderLayout({ title, description, body, pageClass, canonicalPath });
 };
 
 pages.forEach((page) => {
@@ -533,15 +663,24 @@ pages.forEach((page) => {
   const sourceDir = pathFromUrl(urlPath, sourcePagesDir);
   const outputPath = path.join(dir, 'index.html');
   const sourcePath = path.join(sourceDir, 'index.html');
-  const description = page.excerpt || page.title;
+  let description = toMetaDescription(page.excerpt || page.content, page.title);
+  let fullTitle = `${page.title} | Stepping Stones Community Resources`;
   const sanitized = sanitizeContent(page.content);
-  const content = `<section class="page-hero"><div class="container"><h1>${page.title}</h1><p>${page.excerpt || ''}</p></div></section>` +
+  const callProcessBlock = shouldIncludeCallProcess(urlPath) ? renderCallProcess() : '';
+  const heroExcerpt = page.excerpt ? sanitizeContent(page.excerpt) : '';
+  const heroCta = shouldIncludeCallProcess(urlPath)
+    ? `<a class="btn btn-primary" href="tel:${siteConfig.sitePhoneTel}">Call Now</a>`
+    : '';
+  const content = `<section class="page-hero"><div class="container"><h1>${page.title}</h1><p>${heroExcerpt}</p>${heroCta}</div></section>` +
     `<section class="content-section"><div class="container">${sanitized}</div></section>` +
-    `<section class="cta"><div class="container"><h2>Ready to talk?</h2><p>Call ${site.phone} or request an appointment today.</p><a class="btn btn-primary" href="${site.contactUrl}">Request Appointment</a></div></section>`;
+    `${callProcessBlock}` +
+    `<section class="cta"><div class="container"><h2>Ready to talk?</h2><p>Call ${siteConfig.sitePhoneDisplay} to get help now.</p><a class="btn btn-primary" href="tel:${siteConfig.sitePhoneTel}">Call Now</a></div></section>`;
 
   let pageContent = content;
 
   if (urlPath === '/') {
+    fullTitle = 'Stepping Stones Community Resources | Wilson, NC';
+    description = 'Compassionate outpatient treatment and recovery support serving Wilson, Rocky Mount, Garysburg, and Lake Benson, North Carolina.';
     const extracted = extractHomeSections(page.content);
     const leadHtml = sanitizeContent(extracted.leadHtml);
     const highlightHtml = extracted.highlightText ? `<p><strong>${extracted.highlightText}</strong></p>` : '';
@@ -551,19 +690,23 @@ pages.forEach((page) => {
     const leadSection = leadHtml ? `<section class="home-lead"><div class="container">${leadHtml}</div></section>` : '';
     const highlightSection = highlightHtml ? `<section class="home-highlight"><div class="container">${highlightHtml}</div></section>` : '';
     const remainingSection = remaining ? `<section class="content-section"><div class="container">${remaining}</div></section>` : '';
-    pageContent = `${renderHeroSlider(heroSlider)}${leadSection}${renderServicesSlider(filteredServices)}${valueSlider}${highlightSection}${remainingSection}${renderPostList(posts.slice(0, 3))}`;
+    pageContent = `${renderHeroSlider(heroSlider)}${leadSection}${renderServicesSlider(filteredServices)}${valueSlider}${highlightSection}${renderCallProcess()}${remainingSection}${renderPostList(posts.slice(0, 3))}`;
   }
 
   if (urlPath === '/services/') {
-    pageContent = renderServicesIndex(filteredServices);
+    pageContent = `${renderServicesIndex(filteredServices)}${renderCallProcess()}`;
   }
 
   if (serviceByPath.has(urlPath)) {
     const service = serviceByPath.get(urlPath);
-    pageContent = renderServiceDetail(service, sanitized);
+    pageContent = `${renderServiceDetail(service, sanitized)}${renderRelatedLinks()}${renderCallProcess()}`;
   }
 
-  const html = renderBasePage({ title: page.title, description, content: pageContent, pageClass: 'page', footerSections });
+  if (urlPath.endsWith('-nc/') || urlPath === '/locations/') {
+    pageContent = `${pageContent}${renderRelatedLinks()}${renderCallProcess()}`;
+  }
+
+  const html = renderBasePage({ title: fullTitle, description, content: pageContent, pageClass: 'page', footerSections, canonicalPath: urlPath });
   writeFile(outputPath, html);
   writeFile(sourcePath, html);
 });
@@ -578,9 +721,18 @@ posts.forEach((post) => {
   const content = `
   <section class="page-hero"><div class="container"><h1>${post.title}</h1><p>${post.excerpt || ''}</p></div></section>
   <section class="content-section"><div class="container">${sanitized}</div></section>
-  <section class="cta"><div class="container"><h2>Need support?</h2><p>Call ${site.phone} or reach out to our team.</p><a class="btn btn-primary" href="${site.contactUrl}">Request Appointment</a></div></section>`;
+  ${renderCallProcess()}
+  <section class="cta"><div class="container"><h2>Need support?</h2><p>Call ${siteConfig.sitePhoneDisplay} to get help now.</p><a class="btn btn-primary" href="tel:${siteConfig.sitePhoneTel}">Call Now</a></div></section>`;
 
-  const html = renderBasePage({ title: post.title, description: post.excerpt, content, pageClass: 'post', footerSections });
+  const fullTitle = `${post.title} | Stepping Stones Community Resources`;
+  const html = renderBasePage({
+    title: fullTitle,
+    description: toMetaDescription(post.excerpt || post.content, post.title),
+    content,
+    pageClass: 'post',
+    footerSections,
+    canonicalPath: urlPath
+  });
   writeFile(outputPath, html);
   writeFile(sourcePath, html);
 });
@@ -598,17 +750,25 @@ categories.forEach((category) => {
   const content = `
   <section class="page-hero"><div class="container"><h1>${category.name}</h1><p>Posts filed under ${category.name}.</p></div></section>
   <section class="content-section"><div class="container"><ul>${list || '<li>No posts yet.</li>'}</ul></div></section>`;
-  const html = renderBasePage({ title: `${category.name} | Stepping Stones`, description: category.name, content, pageClass: 'archive', footerSections });
+  const html = renderBasePage({
+    title: `${category.name} | Stepping Stones Community Resources`,
+    description: toMetaDescription(category.name, category.name),
+    content,
+    pageClass: 'archive',
+    footerSections,
+    canonicalPath: urlPath
+  });
   writeFile(outputPath, html);
   writeFile(sourcePath, html);
 });
 
 const servicesIndexHtml = renderBasePage({
-  title: 'Services | Stepping Stones Community Resources, Inc.',
+  title: 'Services | Stepping Stones Community Resources',
   description: 'Explore Stepping Stones services and care options.',
   content: renderServicesIndex(filteredServices),
   pageClass: 'services-index',
-  footerSections
+  footerSections,
+  canonicalPath: '/services/'
 });
 const servicesDir = pathFromUrl('/services/', distDir);
 const servicesSourceDir = pathFromUrl('/services/', sourcePagesDir);
@@ -616,15 +776,48 @@ writeFile(path.join(servicesDir, 'index.html'), servicesIndexHtml);
 writeFile(path.join(servicesSourceDir, 'index.html'), servicesIndexHtml);
 
 const resourcesIndexHtml = renderBasePage({
-  title: 'Resources | Stepping Stones Community Resources, Inc.',
+  title: 'Resources | Stepping Stones Community Resources',
   description: 'Resource guides, community information, and program materials.',
-  content: renderResourcesIndex(resources),
+  content: `${renderResourcesIndex(resources)}${renderCallProcess()}`,
   pageClass: 'resources-index',
-  footerSections
+  footerSections,
+  canonicalPath: '/resources/'
 });
 const resourcesDir = pathFromUrl('/resources/', distDir);
 const resourcesSourceDir = pathFromUrl('/resources/', sourcePagesDir);
 writeFile(path.join(resourcesDir, 'index.html'), resourcesIndexHtml);
 writeFile(path.join(resourcesSourceDir, 'index.html'), resourcesIndexHtml);
+
+const buildRouteSet = () => {
+  const routes = new Set();
+  pages.forEach((page) => {
+    routes.add(new URL(page.link).pathname);
+  });
+  posts.forEach((post) => {
+    routes.add(new URL(post.link).pathname);
+  });
+  categories.forEach((category) => {
+    routes.add(`/category/${category.slug}/`);
+  });
+  routes.add('/services/');
+  routes.add('/resources/');
+  if (!routes.has('/')) routes.add('/');
+  return routes;
+};
+
+const routes = buildRouteSet();
+const sitemapEntries = [...routes]
+  .sort()
+  .map((route) => {
+    return `  <url><loc>${BASE_URL}${route}</loc></url>`;
+  })
+  .join('\n');
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`;
+writeFile(path.join(distDir, 'sitemap.xml'), sitemapXml);
+writeFile(path.join(sourcePagesDir, 'sitemap.xml'), sitemapXml);
+
+const robotsTxt = `User-agent: *\nAllow: /\n\nSitemap: ${BASE_URL}/sitemap.xml\n`;
+writeFile(path.join(distDir, 'robots.txt'), robotsTxt);
+writeFile(path.join(sourcePagesDir, 'robots.txt'), robotsTxt);
 
 console.log('Build complete.');

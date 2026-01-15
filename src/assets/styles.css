@@ -22,6 +22,7 @@ body {
   color: var(--ink);
   background: var(--white);
   line-height: 1.6;
+  padding-bottom: 60px;
 }
 
 a {
@@ -88,6 +89,10 @@ img {
   color: var(--white);
   padding: 8px 14px;
   border-radius: 999px;
+}
+
+.header-cta {
+  margin-left: auto;
 }
 
 .site-nav {
@@ -357,6 +362,10 @@ img {
   margin-bottom: 8px;
 }
 
+.page-hero .btn {
+  margin-top: 16px;
+}
+
 .content-section {
   padding: 60px 0;
 }
@@ -364,6 +373,22 @@ img {
 .content-section .container {
   display: grid;
   gap: 20px;
+}
+
+.call-process {
+  padding: 60px 0;
+  background: #f4f1ed;
+}
+
+.call-process h2 {
+  font-family: 'Fraunces', serif;
+  margin-bottom: 12px;
+}
+
+.call-process ol {
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
 }
 
 .cta {
@@ -458,6 +483,15 @@ img {
 .service-hero {
   background: linear-gradient(120deg, var(--sand), var(--cream));
   padding: 70px 0;
+}
+
+.service-areas {
+  background: #f7f3ef;
+  padding: 40px 0;
+}
+
+.service-areas h2 {
+  margin-bottom: 10px;
 }
 
 .value-slider {
@@ -570,6 +604,54 @@ img {
   color: var(--white);
 }
 
+.related-links {
+  padding: 60px 0;
+  background: #f7f3ef;
+}
+
+.related-links .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.related-links h2 {
+  font-family: 'Fraunces', serif;
+  margin-bottom: 10px;
+}
+
+.related-links ul {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.related-links a {
+  color: var(--maroon);
+}
+
+.mobile-call-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(17, 17, 17, 0.92);
+  padding: 10px 16px;
+  display: none;
+  justify-content: center;
+  z-index: 50;
+}
+
+.mobile-call-bar .btn {
+  width: 100%;
+  max-width: 320px;
+}
+
+.footer-disclaimer {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .post-card {
   background: var(--white);
   padding: 18px;
@@ -629,6 +711,14 @@ img {
   .hero-slide-content {
     margin-left: 0;
     padding: 40px 24px;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .mobile-call-bar {
+    display: flex;
   }
 
   .logo {

@@ -10,10 +10,14 @@ This project recreates the Stepping Stones Community Resources, Inc. website as 
 node scripts/build.js
 ```
 
-2. Run the link checker:
+2. Run the QA checks:
 
 ```
 node scripts/link-check.js
+```
+
+```
+node scripts/qa-check.js
 ```
 
 3. Preview locally:
@@ -22,7 +26,14 @@ node scripts/link-check.js
 python3 -m http.server 8000 --directory dist
 ```
 
-## Deploy to Bluehost
+## Deploy to Google (Firebase Hosting)
+
+See `docs/hosting-google.md` for setup and DNS steps.
+
+1. Build the site (`node scripts/build.js`).
+2. Deploy: `firebase deploy --only hosting`.
+
+## Deploy to Bluehost (legacy option)
 
 1. Run the build (`node scripts/build.js`).
 2. Upload the contents of `dist/` to your Bluehost `public_html` directory.
@@ -36,6 +47,7 @@ python3 -m http.server 8000 --directory dist
 - `src/data/services.json`: Services used by the services index + home slider
 - `src/data/hero-slider.json`: Home hero slider content
 - `src/data/site.json`: Global info like phone and contact URL
+- `src/data/siteConfig.json`: Single source for phone display/tel
 
 ## Add a new service
 
@@ -52,6 +64,7 @@ python3 -m http.server 8000 --directory dist
 
 - The build generates static HTML files in both `src/pages/` and `dist/` to keep sources organized and outputs ready for deployment.
 - The link checker verifies internal links in `dist/` and fails if any are missing.
+- The QA checker validates metadata, canonical tags, phone CTA presence, and image locality.
 
 
 ## Update recent posts faster

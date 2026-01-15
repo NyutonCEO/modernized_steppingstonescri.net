@@ -1,0 +1,28 @@
+{
+  "baseUrl": "https://steppingstonescri.net",
+  "phone": {
+    "display": "(919) 269-9300",
+    "tel": "+19192699300"
+  },
+  "targetLocations": [
+    "Wilson, NC",
+    "Rocky Mount, NC",
+    "Garysburg, NC",
+    "Lake Benson, NC"
+  ],
+  "serviceRoutes": [
+    "/individual-counseling/",
+    "/sacot/",
+    "/saiop/",
+    "/case-management/",
+    "/dwi/",
+    "/primary-care/"
+  ],
+  "locationRoutes": [
+    "/locations/",
+    "/wilson-nc/",
+    "/rocky-mount-nc/",
+    "/garysburg-nc/",
+    "/lake-benson-nc/"
+  ]
+}

@@ -382,5 +382,45 @@
     "link": "https://steppingstonescri.net/signs-of-mental-health-problems/",
     "excerpt": "Early Warning Signs of Behavioral/Mental Health Disorder information and resources from Stepping Stones Community Resources, Inc.",
     "content": "<p><strong>Early Warning Signs of Behavioral/Mental Health Disorder</strong></p>\n<p>Content will be updated as needed. Please contact our team for more details.</p>"
+  },
+  {
+    "id": 40348,
+    "title": "Locations",
+    "slug": "locations",
+    "link": "https://steppingstonescri.net/locations/",
+    "excerpt": "Explore how Stepping Stones supports people across our service areas in North Carolina.",
+    "content": "<p><strong>Our Service Areas</strong></p>\n<ul>\n<li><a href=\"/wilson-nc/\">Wilson, NC</a></li>\n<li><a href=\"/rocky-mount-nc/\">Rocky Mount, NC</a></li>\n<li><a href=\"/garysburg-nc/\">Garysburg, NC</a></li>\n<li><a href=\"/lake-benson-nc/\">Lake Benson, NC</a></li>\n</ul>\n<p>We offer outpatient treatment, assessments, and recovery support with a focus on respectful, person-centered care.</p>"
+  },
+  {
+    "id": 40349,
+    "title": "Wilson, NC",
+    "slug": "wilson-nc",
+    "link": "https://steppingstonescri.net/wilson-nc/",
+    "excerpt": "Behavioral health and recovery support for Wilson, North Carolina.",
+    "content": "<p>Residents of Wilson can access outpatient counseling, assessments, and recovery planning with our team. We focus on practical steps, clear expectations, and ongoing support.</p>\n<p><strong>Common needs we support:</strong></p>\n<ul><li>Outpatient therapy and counseling</li><li>Substance use assessments</li><li>Case management and care coordination</li></ul>\n<p>Call to learn how services start and what happens next.</p>"
+  },
+  {
+    "id": 40350,
+    "title": "Rocky Mount, NC",
+    "slug": "rocky-mount-nc",
+    "link": "https://steppingstonescri.net/rocky-mount-nc/",
+    "excerpt": "Behavioral health and recovery support for Rocky Mount, North Carolina.",
+    "content": "<p>People in Rocky Mount can connect with Stepping Stones for outpatient services and recovery support. We explain options clearly and help you take the next step.</p>\n<p><strong>Services often requested:</strong></p>\n<ul><li>Clinical assessments</li><li>Outpatient treatment planning</li><li>Support for families and caregivers</li></ul>\n<p>Call to discuss scheduling and next steps.</p>"
+  },
+  {
+    "id": 40351,
+    "title": "Garysburg, NC",
+    "slug": "garysburg-nc",
+    "link": "https://steppingstonescri.net/garysburg-nc/",
+    "excerpt": "Behavioral health and recovery support for Garysburg, North Carolina.",
+    "content": "<p>For Garysburg residents, we offer evidence-informed outpatient care with a focus on safety, respect, and clear guidance. Our team helps you understand your options.</p>\n<p><strong>We can help with:</strong></p>\n<ul><li>Outpatient counseling</li><li>Recovery planning</li><li>Care coordination and referrals</li></ul>\n<p>Call to learn how to get started.</p>"
+  },
+  {
+    "id": 40352,
+    "title": "Lake Benson, NC",
+    "slug": "lake-benson-nc",
+    "link": "https://steppingstonescri.net/lake-benson-nc/",
+    "excerpt": "Behavioral health and recovery support for Lake Benson, North Carolina.",
+    "content": "<p>Lake Benson community members can reach Stepping Stones for outpatient services and recovery education. We outline what to expect and how care begins.</p>\n<p><strong>Services include:</strong></p>\n<ul><li>Comprehensive assessments</li><li>Outpatient therapy</li><li>Case management support</li></ul>\n<p>Call to discuss your situation and next steps.</p>"
   }
 ]
