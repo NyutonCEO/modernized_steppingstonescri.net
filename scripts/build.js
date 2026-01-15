@@ -28,6 +28,7 @@ const cleanUrl = (url) => {
 };
 
 const stripTags = (html) => html.replace(/<[^>]+>/g, '').trim();
+let assetMap = {};
 
 const sanitizeContent = (html) => {
   if (!html) return '';
@@ -47,6 +48,9 @@ const sanitizeContent = (html) => {
     } catch (error) {
       return match;
     }
+  });
+  Object.entries(assetMap).forEach(([remote, local]) => {
+    content = content.split(remote).join(local);
   });
   return content;
 };
@@ -76,27 +80,39 @@ const renderHeader = (nav, site) => {
   return `
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href="/">${site.name}</a>
-    <button class="nav-toggle" type="button" aria-label="Toggle navigation">Menu</button>
-    <nav class="site-nav">
+    <a class="logo" href="/" aria-label="${site.name}">
+      <img src="/assets/SteppingStonesLogo3.png" alt="${site.name} logo">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
       ${navItems(nav)}
     </nav>
   </div>
 </header>`;
 };
 
-const renderFooter = (footerLinks, site) => {
-  const links = (footerLinks || []).map((link) => {
-    return `<a href="${cleanUrl(link.url)}">${link.title}</a>`;
+const renderFooter = (site, sections) => {
+  const columns = sections.map((section) => {
+    const items = section.items.map((item) => {
+      return `<li><a href="${cleanUrl(item.url)}">${item.title}</a></li>`;
+    }).join('');
+    return `
+    <div class="footer-col">
+      <h4>${section.title}</h4>
+      <ul>${items}</ul>
+    </div>`;
   }).join('');
+
   return `
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div>
+    <div class="footer-brand">
       <h4>${site.name}</h4>
       <p>Call ${site.phone}</p>
     </div>
-    <div class="footer-links">${links}</div>
+    <div class="footer-grid">
+      ${columns}
+    </div>
   </div>
 </footer>`;
 };
@@ -113,6 +129,7 @@ const renderLayout = ({ title, description, body, pageClass = '' }) => {
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body class="${pageClass}">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   ${body}
   <script src="/assets/site.js" defer></script>
 </body>
@@ -143,6 +160,7 @@ const renderHeroSlider = (slides) => {
     <button class="slider-btn prev" type="button" aria-label="Previous slide">&#8592;</button>
     <div class="slider-dots" role="tablist"></div>
     <button class="slider-btn next" type="button" aria-label="Next slide">&#8594;</button>
+    <button class="slider-btn toggle" type="button" aria-pressed="false" aria-label="Pause autoplay">Pause</button>
   </div>
 </section>`;
 };
@@ -155,7 +173,6 @@ const renderServicesSlider = (services) => {
         <img src="${service.image}" alt="${service.name}">
         <div>
           <h3>${service.name}</h3>
-          <p>${service.summary}</p>
         </div>
       </a>
     </article>`;
@@ -168,14 +185,85 @@ const renderServicesSlider = (services) => {
       <h2>Our Services</h2>
       <p>Explore recovery, clinical, and wellness services designed for whole-person care.</p>
     </div>
+    <div class="slider" aria-label="Services slider">
+      <div class="slider-track">
+        ${items}
+      </div>
+    </div>
+  </div>
+</section>`;
+};
+
+const extractHomeSections = (rawHtml) => {
+  let cleaned = rawHtml || '';
+  cleaned = cleaned.replace(/<div class="callout-wrap">[\s\S]*?Click here to preview[\s\S]*?<\/div>\s*<p><!-- END callout-wrap --><br class="clear" \/><\/p>/i, '');
+
+  const highlightBlock = cleaned.match(/<div class="callout-wrap">(?:(?!<div class="callout-wrap">)[\s\S])*?You know you can(?:(?!<div class="callout-wrap">)[\s\S])*?<\/div>/i);
+  const highlightText = highlightBlock ? stripTags(highlightBlock[0]) : '';
+  if (highlightBlock) {
+    cleaned = cleaned.replace(highlightBlock[0], '');
+  }
+
+  const leadBlock = cleaned.match(/<div class="callout-wrap">(?:(?!<div class="callout-wrap">)[\s\S])*?Stepping Stones Community Resources, Inc\.(?:(?!<div class="callout-wrap">)[\s\S])*?<\/div>/i);
+  const leadHtml = leadBlock ? leadBlock[0] : '';
+  if (leadBlock) {
+    cleaned = cleaned.replace(leadBlock[0], '');
+  }
+
+  const cardTitles = ['Quality Care', 'Dependable', 'Personalized'];
+  const cards = [];
+  cardTitles.forEach((title) => {
+    const titleRegex = new RegExp(`<strong>${title}<\\/strong><\\/p>[\\s\\S]*?<p>([^<]+)<\\/p>`, 'i');
+    const match = cleaned.match(titleRegex);
+    if (!match) return;
+    const before = cleaned.slice(0, match.index);
+    const imageMatches = [...before.matchAll(/<img[^>]+src=['"]([^'"]+)['"]/gi)];
+    const image = imageMatches.length ? imageMatches[imageMatches.length - 1][1] : '';
+    if (!image) return;
+    cards.push({ image, title, text: match[1] });
+  });
+
+  cleaned = cleaned.replace(/<div class="one_third[\s\S]*?<p><br class="clear" \/><\/p>/i, '');
+  cleaned = cleaned.replace(/<p><!-- END callout-wrap --><br class="clear" \/><\/p>/gi, '');
+  cleaned = cleaned.replace(/<p><br class="clear" \/><\/p>/gi, '');
+
+  return {
+    leadHtml,
+    highlightText,
+    cards: cards.slice(0, 3),
+    remaining: cleaned
+  };
+};
+
+const renderValueSlider = (cards) => {
+  if (!cards.length) return '';
+  const items = cards.map((card) => {
+    const imageUrl = assetMap[card.image] || card.image;
+    return `
+    <article class="value-slide">
+      <div class="value-slide-image" style="background-image:url('${imageUrl}')"></div>
+      <div class="value-slide-content">
+        <h3>${card.title}</h3>
+        <p>${card.text}</p>
+      </div>
+    </article>`;
+  }).join('');
+
+  return `
+<section class="value-slider">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Our Commitment</h2>
+      <p>Focused care that is consistent, dependable, and tailored to you.</p>
+    </div>
     <div class="slider-shell">
-      <button class="slider-btn prev" type="button" aria-label="Previous services">&#8592;</button>
-      <div class="slider" aria-label="Services slider">
+      <button class="slider-btn prev" type="button" aria-label="Previous commitment">&#8592;</button>
+      <div class="slider" aria-label="Commitment slider">
         <div class="slider-track">
           ${items}
         </div>
       </div>
-      <button class="slider-btn next" type="button" aria-label="Next services">&#8594;</button>
+      <button class="slider-btn next" type="button" aria-label="Next commitment">&#8594;</button>
     </div>
   </div>
 </section>`;
@@ -184,13 +272,12 @@ const renderServicesSlider = (services) => {
 const renderServicesIndex = (services) => {
   const cards = services.map((service) => {
     return `
-    <article class="card">
-      <img src="${service.image}" alt="${service.name}">
-      <div>
+    <article class="service-row">
+      <div class="service-row-content">
         <h3>${service.name}</h3>
         <p>${service.summary}</p>
-        <a href="${service.path}" class="text-link">Learn more</a>
       </div>
+      <a href="${service.path}" class="btn btn-primary">Learn more</a>
     </article>`;
   }).join('');
 
@@ -201,13 +288,40 @@ const renderServicesIndex = (services) => {
       <h2>Services</h2>
       <p>Each service below links to a full overview, expectations, and FAQs.</p>
     </div>
-    <div class="card-grid">
+    <div class="service-rows">
       ${cards}
     </div>
   </div>
 </section>`;
 };
 
+const renderResourcesIndex = (resources) => {
+  const cards = resources.map((resource) => {
+    return `
+    <article class="resource-row">
+      <div class="resource-row-content">
+        <h3>${resource.title}</h3>
+        <p>${resource.summary}</p>
+      </div>
+      <a href="${resource.path}" class="btn btn-primary">View resource</a>
+    </article>`;
+  }).join('');
+
+  return `
+<section class="services-index">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Resources</h2>
+      <p>Helpful information, program details, and community resources.</p>
+    </div>
+    <div class="resource-scroll" aria-label="Resources list">
+      <div class="resource-track">
+        ${cards}
+      </div>
+    </div>
+  </div>
+</section>`;
+};
 const renderServiceDetail = (service, pageContent) => {
   const expectations = service.expectations.map((item) => `<li>${item}</li>`).join('');
   const faqs = service.faqs.map((faq) => {
@@ -264,7 +378,11 @@ const renderPostList = (posts) => {
       <h2>Recent Posts</h2>
       <p>Updates, events, and resources from Stepping Stones.</p>
     </div>
-    <div class="post-grid">${items}</div>
+    <div class="post-slider" aria-label="Recent posts slider">
+      <div class="slider-track">
+        ${items}
+      </div>
+    </div>
   </div>
 </section>`;
 };
@@ -276,7 +394,100 @@ const nav = readJson(path.join(dataDir, 'nav.json'));
 const services = readJson(path.join(dataDir, 'services.json'));
 const heroSlider = readJson(path.join(dataDir, 'hero-slider.json'));
 const site = readJson(path.join(dataDir, 'site.json'));
+const assetMapPath = path.join(dataDir, 'asset-map.json');
+if (fs.existsSync(assetMapPath)) {
+  assetMap = readJson(assetMapPath);
+}
 
+const allowedServiceSlugs = new Set([
+  'individual-counseling',
+  'sacot',
+  'saiop',
+  'case-management',
+  'dwi',
+  'primary-care'
+]);
+
+const serviceNameOverrides = {
+  sacot: 'Substance Abuse Counseling Outpatient Treatment',
+  saiop: 'Substance Abuse Intensive Outpatient Program',
+  'individual-counseling': 'Individual Outpatient Therapy',
+  'dwi': 'DWI Services',
+  'primary-care': 'Primary Care'
+};
+
+const filteredServices = services
+  .filter((service) => allowedServiceSlugs.has(service.slug))
+  .map((service) => ({
+    ...service,
+    name: serviceNameOverrides[service.slug] || service.name
+  }));
+
+const resourceSlugs = [
+  'spreading-seeds',
+  'healthy-start-medical-transportation',
+  'substance-abuse-and-mental-health-information',
+  'our-listings',
+  'press-releases',
+  'events',
+  'newsletter',
+  'stakeholder-surveys',
+  'notices',
+  'persons-served-rights-committee'
+];
+
+const resources = pages
+  .filter((page) => resourceSlugs.includes(page.slug))
+  .map((page) => {
+    const pathName = new URL(page.link).pathname;
+    const summary = page.excerpt || stripTags(page.content).split(/\s+/).slice(0, 32).join(' ') + '...';
+    return {
+      title: page.title,
+      path: pathName,
+      summary
+    };
+  });
+
+const servicesFooterItems = filteredServices.map((service) => ({
+  title: service.name,
+  url: service.path
+}));
+
+const resourcesFooterItems = resources.map((resource) => ({
+  title: resource.title,
+  url: resource.path
+}));
+
+const postsFooterItems = posts.map((post) => ({
+  title: post.title,
+  url: new URL(post.link).pathname
+}));
+
+const archivesFooterItems = categories.map((category) => ({
+  title: category.name,
+  url: `/category/${category.slug}/`
+}));
+
+const otherPagesFooterItems = pages
+  .filter((page) => {
+    const pathName = new URL(page.link).pathname;
+    if (pathName === '/services/' || pathName === '/resources/') return false;
+    if (allowedServiceSlugs.has(page.slug)) return false;
+    if (resourceSlugs.includes(page.slug)) return false;
+    return true;
+  })
+  .map((page) => ({
+    title: page.title,
+    url: new URL(page.link).pathname
+  }));
+
+const footerSections = [
+  { title: 'Services', items: servicesFooterItems },
+  { title: 'Resources', items: resourcesFooterItems },
+  { title: 'Posts', items: postsFooterItems },
+  { title: 'Archives', items: archivesFooterItems },
+  { title: 'Other Pages', items: otherPagesFooterItems }
+];
 const serviceByPath = new Map(services.map((service) => [service.path, service]));
 const postsByCategory = {};
 posts.forEach((post) => {
@@ -309,10 +520,10 @@ ensureDir(sourcePostsDir);
 copyDir(assetsDir, path.join(distDir, 'assets'));
 copyDir(assetsDir, path.join(sourcePagesDir, 'assets'));
 
-const renderBasePage = ({ title, description, content, pageClass }) => {
+const renderBasePage = ({ title, description, content, pageClass, footerSections }) => {
   const header = renderHeader(nav.header, site);
-  const footer = renderFooter(nav.footer, site);
-  const body = `${header}\n<main>${content}</main>\n${footer}`;
+  const footer = renderFooter(site, footerSections);
+  const body = `${header}\n<main id="main-content">${content}</main>\n${footer}`;
   return renderLayout({ title, description, body, pageClass });
 };
 
@@ -331,12 +542,20 @@ pages.forEach((page) => {
   let pageContent = content;
 
   if (urlPath === '/') {
-    const homeContent = sanitizeContent(page.content);
-    pageContent = `${renderHeroSlider(heroSlider)}${renderServicesSlider(services)}<section class="content-section"><div class="container">${homeContent}</div></section>${renderPostList(posts.slice(0, 3))}`;
+    const extracted = extractHomeSections(page.content);
+    const leadHtml = sanitizeContent(extracted.leadHtml);
+    const highlightHtml = extracted.highlightText ? `<p><strong>${extracted.highlightText}</strong></p>` : '';
+    let remaining = sanitizeContent(extracted.remaining);
+    remaining = remaining.replace(/<div class="callout-wrap">[\s\S]*?You know you can[\s\S]*?<\/div>/gi, '');
+    const valueSlider = renderValueSlider(extracted.cards);
+    const leadSection = leadHtml ? `<section class="home-lead"><div class="container">${leadHtml}</div></section>` : '';
+    const highlightSection = highlightHtml ? `<section class="home-highlight"><div class="container">${highlightHtml}</div></section>` : '';
+    const remainingSection = remaining ? `<section class="content-section"><div class="container">${remaining}</div></section>` : '';
+    pageContent = `${renderHeroSlider(heroSlider)}${leadSection}${renderServicesSlider(filteredServices)}${valueSlider}${highlightSection}${remainingSection}${renderPostList(posts.slice(0, 3))}`;
   }
 
   if (urlPath === '/services/') {
-    pageContent = renderServicesIndex(services);
+    pageContent = renderServicesIndex(filteredServices);
   }
 
   if (serviceByPath.has(urlPath)) {
@@ -344,7 +563,7 @@ pages.forEach((page) => {
     pageContent = renderServiceDetail(service, sanitized);
   }
 
-  const html = renderBasePage({ title: page.title, description, content: pageContent, pageClass: 'page' });
+  const html = renderBasePage({ title: page.title, description, content: pageContent, pageClass: 'page', footerSections });
   writeFile(outputPath, html);
   writeFile(sourcePath, html);
 });
@@ -361,7 +580,7 @@ posts.forEach((post) => {
   <section class="content-section"><div class="container">${sanitized}</div></section>
   <section class="cta"><div class="container"><h2>Need support?</h2><p>Call ${site.phone} or reach out to our team.</p><a class="btn btn-primary" href="${site.contactUrl}">Request Appointment</a></div></section>`;
 
-  const html = renderBasePage({ title: post.title, description: post.excerpt, content, pageClass: 'post' });
+  const html = renderBasePage({ title: post.title, description: post.excerpt, content, pageClass: 'post', footerSections });
   writeFile(outputPath, html);
   writeFile(sourcePath, html);
 });
@@ -379,7 +598,7 @@ categories.forEach((category) => {
   const content = `
   <section class="page-hero"><div class="container"><h1>${category.name}</h1><p>Posts filed under ${category.name}.</p></div></section>
   <section class="content-section"><div class="container"><ul>${list || '<li>No posts yet.</li>'}</ul></div></section>`;
-  const html = renderBasePage({ title: `${category.name} | Stepping Stones`, description: category.name, content, pageClass: 'archive' });
+  const html = renderBasePage({ title: `${category.name} | Stepping Stones`, description: category.name, content, pageClass: 'archive', footerSections });
   writeFile(outputPath, html);
   writeFile(sourcePath, html);
 });
@@ -387,12 +606,25 @@ categories.forEach((category) => {
 const servicesIndexHtml = renderBasePage({
   title: 'Services | Stepping Stones Community Resources, Inc.',
   description: 'Explore Stepping Stones services and care options.',
-  content: renderServicesIndex(services),
-  pageClass: 'services-index'
+  content: renderServicesIndex(filteredServices),
+  pageClass: 'services-index',
+  footerSections
 });
 const servicesDir = pathFromUrl('/services/', distDir);
 const servicesSourceDir = pathFromUrl('/services/', sourcePagesDir);
 writeFile(path.join(servicesDir, 'index.html'), servicesIndexHtml);
 writeFile(path.join(servicesSourceDir, 'index.html'), servicesIndexHtml);
+
+const resourcesIndexHtml = renderBasePage({
+  title: 'Resources | Stepping Stones Community Resources, Inc.',
+  description: 'Resource guides, community information, and program materials.',
+  content: renderResourcesIndex(resources),
+  pageClass: 'resources-index',
+  footerSections
+});
+const resourcesDir = pathFromUrl('/resources/', distDir);
+const resourcesSourceDir = pathFromUrl('/resources/', sourcePagesDir);
+writeFile(path.join(resourcesDir, 'index.html'), resourcesIndexHtml);
+writeFile(path.join(resourcesSourceDir, 'index.html'), resourcesIndexHtml);
 
 console.log('Build complete.');

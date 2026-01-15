@@ -6,225 +6,23 @@
       "children": []
     },
     {
-      "title": "About",
-      "url": "#",
-      "children": [
-        {
-          "title": "Mission",
-          "url": "https://steppingstonescri.net/mission/",
-          "children": []
-        },
-        {
-          "title": "History",
-          "url": "https://steppingstonescri.net/history/",
-          "children": []
-        },
-        {
-          "title": "Location",
-          "url": "https://steppingstonescri.net/location/",
-          "children": []
-        }
-      ]
-    },
-    {
-      "title": "What We Treat",
-      "url": "#",
-      "children": [
-        {
-          "title": "Substance Abuse",
-          "url": "https://steppingstonescri.net/substance-abuse/",
-          "children": []
-        },
-        {
-          "title": "Early Warning Signs of Substance Abuse",
-          "url": "https://steppingstonescri.net/early-warning-signs-of-substance-abuse/",
-          "children": []
-        },
-        {
-          "title": "Behavioral/Mental Health",
-          "url": "https://steppingstonescri.net/behavioral-mental-health/",
-          "children": []
-        },
-        {
-          "title": "Early Warning Signs of Behavioral/Mental Health Disorder",
-          "url": "https://steppingstonescri.net/signs-of-mental-health-problems/",
-          "children": []
-        }
-      ]
-    },
-    {
       "title": "Services",
-      "url": "#",
-      "children": [
-        {
-          "title": "Individual Outpatient Therapy",
-          "url": "https://steppingstonescri.net/individual-counseling/",
-          "children": []
-        },
-        {
-          "title": "Comprehensive Clinical Assessment",
-          "url": "https://steppingstonescri.net/comprehensive-clinical-assessment/",
-          "children": []
-        },
-        {
-          "title": "SACOT",
-          "url": "https://steppingstonescri.net/sacot/",
-          "children": []
-        },
-        {
-          "title": "SAIOP",
-          "url": "https://steppingstonescri.net/saiop/",
-          "children": []
-        },
-        {
-          "title": "Case Management",
-          "url": "https://steppingstonescri.net/case-management/",
-          "children": []
-        },
-        {
-          "title": "Primary Care",
-          "url": "#",
-          "children": [
-            {
-              "title": "Primary Care \u2013 About Us",
-              "url": "https://steppingstonescri.net/primary-care/",
-              "children": []
-            },
-            {
-              "title": "Primary Care \u2013 Support Staff",
-              "url": "https://steppingstonescri.net/primary-care-support-staff/",
-              "children": []
-            },
-            {
-              "title": "Primary Care \u2013 Location & Office Hours",
-              "url": "https://steppingstonescri.net/primary-care-location-office-hours/",
-              "children": []
-            },
-            {
-              "title": "Primary Care \u2013 Services",
-              "url": "https://steppingstonescri.net/primary-care-services/",
-              "children": []
-            },
-            {
-              "title": "Primary Care \u2013 Payment Options",
-              "url": "https://steppingstonescri.net/primary-care-payment-options/",
-              "children": []
-            }
-          ]
-        },
-        {
-          "title": "DWI Services",
-          "url": "https://steppingstonescri.net/dwi/",
-          "children": []
-        },
-        {
-          "title": "Payment Options",
-          "url": "https://steppingstonescri.net/accepted-insurance/",
-          "children": []
-        }
-      ]
-    },
-    {
-      "title": "Contact Us",
-      "url": "#",
-      "children": [
-        {
-          "title": "Individual Outpatient Therapy \u2013 Request An Appointment",
-          "url": "https://steppingstonescri.net/individual-outpatient-therapy-request-an-appointment/",
-          "children": []
-        },
-        {
-          "title": "Substance Abuse and Behavioral/Mental Health  \u2013 Request An Appointment",
-          "url": "https://steppingstonescri.net/substance-abusemental-health-contact/",
-          "children": []
-        },
-        {
-          "title": "Primary Care \u2013 Request An Appointment",
-          "url": "https://steppingstonescri.net/primary-care-request-an-appointment/",
-          "children": []
-        },
-        {
-          "title": "DWI Services \u2013 Request An Appointment",
-          "url": "https://steppingstonescri.net/dwi-2/",
-          "children": []
-        },
-        {
-          "title": "General Information Contact",
-          "url": "https://steppingstonescri.net/general-information-contact/",
-          "children": []
-        }
-      ]
-    },
-    {
-      "title": "Resources",
-      "url": "#",
-      "children": [
-        {
-          "title": "Spreading Seeds",
-          "url": "https://steppingstonescri.net/spreading-seeds/",
-          "children": []
-        },
-        {
-          "title": "Healthy Start Medical Transportation",
-          "url": "https://steppingstonescri.net/healthy-start-medical-transportation/",
-          "children": []
-        },
-        {
-          "title": "Substance Abuse and Behavioral/Mental Health Information",
-          "url": "https://steppingstonescri.net/substance-abuse-and-mental-health-information/",
-          "children": []
-        },
-        {
-          "title": "Our Listings",
-          "url": "https://steppingstonescri.net/our-listings/",
-          "children": []
-        }
-      ]
-    },
-    {
-      "title": "News & Events",
-      "url": "#",
-      "children": [
-        {
-          "title": "Press Releases",
-          "url": "https://steppingstonescri.net/press-releases/",
-          "children": []
-        },
-        {
-          "title": "Events",
-          "url": "https://steppingstonescri.net/events/",
-          "children": []
-        },
-        {
-          "title": "Newsletter",
-          "url": "https://steppingstonescri.net/newsletter/",
-          "children": []
-        },
-        {
-          "title": "Stakeholder Surveys",
-          "url": "https://steppingstonescri.net/stakeholder-surveys/",
-          "children": []
-        },
-        {
-          "title": "Operational Information",
-          "url": "https://steppingstonescri.net/notices/",
-          "children": []
-        },
-        {
-          "title": "Human Rights Committee",
-          "url": "https://steppingstonescri.net/persons-served-rights-committee/",
-          "children": []
-        }
-      ]
-    },
-    {
-      "title": "Careers",
-      "url": "https://steppingstonescri.net/careers/",
+      "url": "https://steppingstonescri.net/services/",
       "children": []
     },
     {
-      "title": "STRATEGIC PLAN 2023-24",
-      "url": "https://steppingstonescri.net/strategic-plan-2023-24/",
+      "title": "Resources",
+      "url": "https://steppingstonescri.net/resources/",
+      "children": []
+    },
+    {
+      "title": "Contact Us",
+      "url": "https://steppingstonescri.net/general-information-contact/",
+      "children": []
+    },
+    {
+      "title": "Strategic Plan",
+      "url": "https://steppingstonescri.net/strategic-plan-2025-2026/",
       "children": []
     }
   ],

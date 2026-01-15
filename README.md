@@ -52,3 +52,19 @@ python3 -m http.server 8000 --directory dist
 
 - The build generates static HTML files in both `src/pages/` and `dist/` to keep sources organized and outputs ready for deployment.
 - The link checker verifies internal links in `dist/` and fails if any are missing.
+
+
+## Update recent posts faster
+
+Use the helper script to append or update posts from Markdown or CSV:
+
+```
+node scripts/posts-helper.js --from-md content/posts
+```
+
+```
+node scripts/posts-helper.js --from-csv content/posts.csv
+```
+
+
+The helper script will auto-run `node scripts/build.js` after importing posts so the site updates immediately.

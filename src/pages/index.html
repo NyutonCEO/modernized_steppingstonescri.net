@@ -8,77 +8,27 @@
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body class="page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href="/">Stepping Stones Community Resources, Inc.</a>
-    <button class="nav-toggle" type="button" aria-label="Toggle navigation">Menu</button>
-    <nav class="site-nav">
+    <a class="logo" href="/" aria-label="Stepping Stones Community Resources, Inc.">
+      <img src="/assets/SteppingStonesLogo3.png" alt="Stepping Stones Community Resources, Inc. logo">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
       
 <ul class="nav-list">
 <li class="nav-item"><a href="/">Home</a></li>
-<li class="nav-item has-children"><a href="#">About</a>
-<ul class="nav-sublist">
-<li class="nav-item"><a href="/mission/">Mission</a></li>
-<li class="nav-item"><a href="/history/">History</a></li>
-<li class="nav-item"><a href="/location/">Location</a></li>
-</ul></li>
-<li class="nav-item has-children"><a href="#">What We Treat</a>
-<ul class="nav-sublist">
-<li class="nav-item"><a href="/substance-abuse/">Substance Abuse</a></li>
-<li class="nav-item"><a href="/early-warning-signs-of-substance-abuse/">Early Warning Signs of Substance Abuse</a></li>
-<li class="nav-item"><a href="/behavioral-mental-health/">Behavioral/Mental Health</a></li>
-<li class="nav-item"><a href="/signs-of-mental-health-problems/">Early Warning Signs of Behavioral/Mental Health Disorder</a></li>
-</ul></li>
-<li class="nav-item has-children"><a href="#">Services</a>
-<ul class="nav-sublist">
-<li class="nav-item"><a href="/individual-counseling/">Individual Outpatient Therapy</a></li>
-<li class="nav-item"><a href="/comprehensive-clinical-assessment/">Comprehensive Clinical Assessment</a></li>
-<li class="nav-item"><a href="/sacot/">SACOT</a></li>
-<li class="nav-item"><a href="/saiop/">SAIOP</a></li>
-<li class="nav-item"><a href="/case-management/">Case Management</a></li>
-<li class="nav-item has-children"><a href="#">Primary Care</a>
-<ul class="nav-sublist">
-<li class="nav-item"><a href="/primary-care/">Primary Care – About Us</a></li>
-<li class="nav-item"><a href="/primary-care-support-staff/">Primary Care – Support Staff</a></li>
-<li class="nav-item"><a href="/primary-care-location-office-hours/">Primary Care – Location & Office Hours</a></li>
-<li class="nav-item"><a href="/primary-care-services/">Primary Care – Services</a></li>
-<li class="nav-item"><a href="/primary-care-payment-options/">Primary Care – Payment Options</a></li>
-</ul></li>
-<li class="nav-item"><a href="/dwi/">DWI Services</a></li>
-<li class="nav-item"><a href="/accepted-insurance/">Payment Options</a></li>
-</ul></li>
-<li class="nav-item has-children"><a href="#">Contact Us</a>
-<ul class="nav-sublist">
-<li class="nav-item"><a href="/individual-outpatient-therapy-request-an-appointment/">Individual Outpatient Therapy – Request An Appointment</a></li>
-<li class="nav-item"><a href="/substance-abusemental-health-contact/">Substance Abuse and Behavioral/Mental Health  – Request An Appointment</a></li>
-<li class="nav-item"><a href="/primary-care-request-an-appointment/">Primary Care – Request An Appointment</a></li>
-<li class="nav-item"><a href="/dwi-2/">DWI Services – Request An Appointment</a></li>
-<li class="nav-item"><a href="/general-information-contact/">General Information Contact</a></li>
-</ul></li>
-<li class="nav-item has-children"><a href="#">Resources</a>
-<ul class="nav-sublist">
-<li class="nav-item"><a href="/spreading-seeds/">Spreading Seeds</a></li>
-<li class="nav-item"><a href="/healthy-start-medical-transportation/">Healthy Start Medical Transportation</a></li>
-<li class="nav-item"><a href="/substance-abuse-and-mental-health-information/">Substance Abuse and Behavioral/Mental Health Information</a></li>
-<li class="nav-item"><a href="/our-listings/">Our Listings</a></li>
-</ul></li>
-<li class="nav-item has-children"><a href="#">News & Events</a>
-<ul class="nav-sublist">
-<li class="nav-item"><a href="/press-releases/">Press Releases</a></li>
-<li class="nav-item"><a href="/events/">Events</a></li>
-<li class="nav-item"><a href="/newsletter/">Newsletter</a></li>
-<li class="nav-item"><a href="/stakeholder-surveys/">Stakeholder Surveys</a></li>
-<li class="nav-item"><a href="/notices/">Operational Information</a></li>
-<li class="nav-item"><a href="/persons-served-rights-committee/">Human Rights Committee</a></li>
-</ul></li>
-<li class="nav-item"><a href="/careers/">Careers</a></li>
-<li class="nav-item"><a href="/strategic-plan-2023-24/">STRATEGIC PLAN 2023-24</a></li>
+<li class="nav-item"><a href="/services/">Services</a></li>
+<li class="nav-item"><a href="/resources/">Resources</a></li>
+<li class="nav-item"><a href="/general-information-contact/">Contact Us</a></li>
+<li class="nav-item"><a href="/strategic-plan-2025-2026/">Strategic Plan</a></li>
 </ul>
     </nav>
   </div>
 </header>
-<main>
+<main id="main-content">
 <section class="hero-slider" aria-label="Stepping Stones featured messages">
   <div class="hero-slider-track">
     
@@ -150,52 +100,41 @@
     <button class="slider-btn prev" type="button" aria-label="Previous slide">&#8592;</button>
     <div class="slider-dots" role="tablist"></div>
     <button class="slider-btn next" type="button" aria-label="Next slide">&#8594;</button>
+    <button class="slider-btn toggle" type="button" aria-pressed="false" aria-label="Pause autoplay">Pause</button>
   </div>
-</section>
+</section><section class="home-lead"><div class="container"><div class="callout-wrap"><span><br />
+<strong>Stepping Stones Community Resources, Inc. is committed to serving those who are fighting addiction, substance abuse, and behavioral/mental health disorders amid a principle of confidentiality. The company takes a proactive approach to ensuring the individual needs of those served with a Comprehensive Clinical Assessment and provide treatment/services such as Individual Outpatient Therapy, Substance Abuse Counseling Outpatient Treatment, Substance Abuse Intensive Outpatient Program, Case Management, DWI Services, and Stepping Stones Primary Care. Educating those we serve is key to recovery and prevention.</strong></p>
+<p style="text-align: center;"><em><strong>&#8220;A Journey of a Thousand Miles Begins with the First Step&#8221;</strong></em></span></div></div></section>
 <section class="services-slider">
   <div class="container">
     <div class="section-heading">
       <h2>Our Services</h2>
       <p>Explore recovery, clinical, and wellness services designed for whole-person care.</p>
     </div>
-    <div class="slider-shell">
-      <button class="slider-btn prev" type="button" aria-label="Previous services">&#8592;</button>
-      <div class="slider" aria-label="Services slider">
-        <div class="slider-track">
-          
+    <div class="slider" aria-label="Services slider">
+      <div class="slider-track">
+        
     <article class="service-slide">
       <a href="/individual-counseling/" class="service-slide-link">
         <img src="/assets/service-placeholder.svg" alt="Individual Outpatient Therapy">
         <div>
           <h3>Individual Outpatient Therapy</h3>
-          <p>Individual Outpatient Therapy is a specialized treatment that is personalized to the needs of the individual and recognizes the importance of the individual. We provide quality treatment in areas of anger management, mood disorders, anxiety disorders, attention deficit hyperactivity disorders (ADHD), behavioral disorders, post-traumatic stress disorder (PTSD), stress management, substance abuse disorders, gambling addiction disorders, eating disorders, and obsessive-compulsive disorders.</p>
-        </div>
-      </a>
-    </article>
-    <article class="service-slide">
-      <a href="/comprehensive-clinical-assessment/" class="service-slide-link">
-        <img src="/assets/service-placeholder.svg" alt="Comprehensive Clinical Assessment">
-        <div>
-          <h3>Comprehensive Clinical Assessment</h3>
-          <p>Each person is assessed to appropriately identify his/her needs/problems and if appropriate, the needs of the family of the person. A clinical screening/assessment/evaluation is conducted on each individual who presents himself/herself for services and/or is referred for assessment, treatment, or evaluation to determine appropriateness for admission and disposition/referral for additional treatment services.</p>
         </div>
       </a>
     </article>
     <article class="service-slide">
       <a href="/sacot/" class="service-slide-link">
-        <img src="/assets/service-placeholder.svg" alt="SACOT">
+        <img src="/assets/service-placeholder.svg" alt="Substance Abuse Counseling Outpatient Treatment">
         <div>
-          <h3>SACOT</h3>
-          <p>Substance Abuse Counseling Outpatient Treatment (SACOT) is a structured individual and group addiction activities and services that are provided at an outpatient program designed to assist adults and adolescents to begin recovery and learn skills for recovery maintenance. The program is offered at least 4 hours a day, at least 4 days a week, no more than 7 days a week with no more than 2 consecutive days between offered services, and distinguishes between those individuals needing more than 20 hours of structured services per week.</p>
+          <h3>Substance Abuse Counseling Outpatient Treatment</h3>
         </div>
       </a>
     </article>
     <article class="service-slide">
       <a href="/saiop/" class="service-slide-link">
-        <img src="/assets/service-placeholder.svg" alt="SAIOP">
+        <img src="/assets/service-placeholder.svg" alt="Substance Abuse Intensive Outpatient Program">
         <div>
-          <h3>SAIOP</h3>
-          <p>Substance Abuse Intensive Outpatient Program (SAIOP) is a structured individual and group addiction activities and services that are provided at an outpatient program with the goals of assisting adults and adolescents to begin recovery and learn life skills for recovery maintenance. The program is offered at least 3 hours a day, at least 3 days a week, with no more than 2 consecutive days between offered services, and distinguishes between those individuals needing no more than 15 hours of structured services per week.</p>
+          <h3>Substance Abuse Intensive Outpatient Program</h3>
         </div>
       </a>
     </article>
@@ -204,54 +143,14 @@
         <img src="/assets/service-placeholder.svg" alt="Case Management">
         <div>
           <h3>Case Management</h3>
-          <p>Case Management is a service for adults, women who are pregnant and children age three (3) and older who have a serious emotional disturbance, mental illness, or a substance abuse related disorder. Case Management assists recipients in gaining access to necessary care and medical, behavioral, social, housing and other services appropriate to their needs.</p>
         </div>
       </a>
     </article>
     <article class="service-slide">
       <a href="/primary-care/" class="service-slide-link">
-        <img src="/assets/service-placeholder.svg" alt="Primary Care – About Us">
+        <img src="/assets/service-placeholder.svg" alt="Primary Care">
         <div>
-          <h3>Primary Care – About Us</h3>
-          <p>Stepping Stones Primary Care is committed to being the main point of contact for continuing care for patients within our health care system. We are dedicated to health promotion, disease prevention, health maintenance, counseling, patient education, diagnosis, and treatment.</p>
-        </div>
-      </a>
-    </article>
-    <article class="service-slide">
-      <a href="/primary-care-support-staff/" class="service-slide-link">
-        <img src="/assets/service-placeholder.svg" alt="Primary Care – Support Staff">
-        <div>
-          <h3>Primary Care – Support Staff</h3>
-          <p>[vc_row][vc_column][vc_column_text css=””]
-[/vc_column_text][/vc_column][/vc_row]</p>
-        </div>
-      </a>
-    </article>
-    <article class="service-slide">
-      <a href="/primary-care-location-office-hours/" class="service-slide-link">
-        <img src="/assets/service-placeholder.svg" alt="Primary Care – Location & Office Hours">
-        <div>
-          <h3>Primary Care – Location & Office Hours</h3>
-          <p>LOCATION OFFICE 1760 Parkwood Blvd West Wilson NC 27893 (252) 991-7009 / 7010 (252) 991-7011 fax HOURS Monday - 8:00 am - 2:00 pm Tuesday thru Thursday - 8:00 am - 4:00 pm Friday - 8:00 am - 2:00 pm Closed Weekends   Request An Appointment   Quality Care You’re in good hands, so make your [...]</p>
-        </div>
-      </a>
-    </article>
-    <article class="service-slide">
-      <a href="/primary-care-services/" class="service-slide-link">
-        <img src="/assets/service-placeholder.svg" alt="Primary Care – Services">
-        <div>
-          <h3>Primary Care – Services</h3>
-          <p>OUR SERVICES Preventive Care Well Child Exams, School and Sports Physicals Immunizations Adult Physicals, including Work Physicals Appropriate Screenings (such as: Pap Smears, Mammograms, Colonoscopies, Prostate Cancer) Management of Acute Problems Management of Chronic Illnesses WE CAN HELP YOU WITH: Blood Pressure Cholesterol Diabetes Nutrition Thyroid Problems Asthma Seasonal Allergies Flu or Pneumonia Depression or [...]</p>
-        </div>
-      </a>
-    </article>
-    <article class="service-slide">
-      <a href="/primary-care-payment-options/" class="service-slide-link">
-        <img src="/assets/service-placeholder.svg" alt="Primary Care – Payment Options">
-        <div>
-          <h3>Primary Care – Payment Options</h3>
-          <p>PAYMENT OPTIONS
-We accept NC Medicaid, Medicare, Tricare, Cigna, Aetna, Blue Cross Blue Shield, Self-Pay, Cash and all Major Credit Cards. We accept Patients without Insurance.</p>
+          <h3>Primary Care</h3>
         </div>
       </a>
     </article>
@@ -260,78 +159,58 @@ We accept NC Medicaid, Medicare, Tricare, Cigna, Aetna, Blue Cross Blue Shield, 
         <img src="/assets/service-placeholder.svg" alt="DWI Services">
         <div>
           <h3>DWI Services</h3>
-          <p>Did you get a DWI or a Criminal Drug Charge? Well, you&#8217;ve come to the right place!</p>
         </div>
       </a>
     </article>
-    <article class="service-slide">
-      <a href="/accepted-insurance/" class="service-slide-link">
-        <img src="/assets/service-placeholder.svg" alt="Payment Options">
-        <div>
-          <h3>Payment Options</h3>
-          <p>We accept the following:
-
-NC Medicaid
-NC Medicaid Managed Care
-
-Carolina Complete Health, Inc
-Healthy Blue
-AmeriHealth
-WellCare
-
-
-Blue Cross Blue Shield
-Cigna
-Aetna
-Humana
-Tri Care
-
-
-
-&nbsp;
-&nbsp;</p>
-        </div>
-      </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="value-slider">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Our Commitment</h2>
+      <p>Focused care that is consistent, dependable, and tailored to you.</p>
+    </div>
+    <div class="slider-shell">
+      <button class="slider-btn prev" type="button" aria-label="Previous commitment">&#8592;</button>
+      <div class="slider" aria-label="Commitment slider">
+        <div class="slider-track">
+          
+    <article class="value-slide">
+      <div class="value-slide-image" style="background-image:url('/assets/external/road-to-success-2.jpg')"></div>
+      <div class="value-slide-content">
+        <h3>Quality Care</h3>
+        <p>We are a licensed substance abuse and behavioral/mental health treatment facility providing treatment for adolescents, women and men.</p>
+      </div>
+    </article>
+    <article class="value-slide">
+      <div class="value-slide-image" style="background-image:url('https://steppingstonescri.net/wp-content/uploads/2016/05/Fix-My-DWI-Logo.jpg')"></div>
+      <div class="value-slide-content">
+        <h3>Dependable</h3>
+        <p>We are committed to providing needed services for those who have received a DWI.</p>
+      </div>
+    </article>
+    <article class="value-slide">
+      <div class="value-slide-image" style="background-image:url('/assets/external/a-better-life.jpg')"></div>
+      <div class="value-slide-content">
+        <h3>Personalized</h3>
+        <p>We help those who want to achieve their goal of living a better life.</p>
+      </div>
     </article>
         </div>
       </div>
-      <button class="slider-btn next" type="button" aria-label="Next services">&#8594;</button>
+      <button class="slider-btn next" type="button" aria-label="Next commitment">&#8594;</button>
     </div>
   </div>
-</section><section class="content-section"><div class="container"><div class="callout-wrap"><span></p>
-<p style="text-align:;"><a class="ka_button tt_ large_button large_fire" title="" href="https://steppingstonescri.net/2016/primary-care/"><strong>Click here to preview NEW Integrated Health Care Service</strong></a></p>
-<p></span></div>
-<p><!-- END callout-wrap --><br class="clear" /></p>
-<div class="callout-wrap"><span><br />
-<strong>Stepping Stones Community Resources, Inc. is committed to serving those who are fighting addiction, substance abuse, and behavioral/mental health disorders amid a principle of confidentiality. The company takes a proactive approach to ensuring the individual needs of those served with a Comprehensive Clinical Assessment and provide treatment/services such as Individual Outpatient Therapy, Substance Abuse Counseling Outpatient Treatment, Substance Abuse Intensive Outpatient Program, Case Management, DWI Services, and Stepping Stones Primary Care. Educating those we serve is key to recovery and prevention.</strong></p>
-<p style="text-align: center;"><em><strong>&#8220;A Journey of a Thousand Miles Begins with the First Step&#8221;</strong></em></span></div>
+</section><section class="home-highlight"><div class="container"><p><strong>You know you can if you get the chance&#8230;.Well HERE&#8217;S YOUR CHANCE!
+Call us today at (919) 269-9300</strong></p></div></section><section class="content-section"><div class="container">
+
 <p><!-- END callout-wrap --><br class="clear" />
 </p>
-<div class="one_third tt-column">
-<div class="modern_img_frame modern_three_col_large tt_">
-<div class="img-preload lightbox-img"><a href="#" class="attachment-fadeIn" title="" target=""><span class="lightbox-zoom zoom-3 zoom-link" style="position:absolute; display: none;">&nbsp;</span><img src="https://steppingstonescri.net/wp-content/uploads/2016/05/road-to-success-2.jpg" alt='' class="attachment-fadeIn" /></a></div>
-</div>
-<p><strong>Quality Care</strong></p>
-<p>We are a licensed substance abuse and behavioral/mental health treatment facility providing treatment for adolescents, women and men.</p>
-</div>
-<div class="one_third tt-column">
-<div class="modern_img_frame modern_three_col_large tt_">
-<div class="img-preload lightbox-img"><a href="#" class="attachment-fadeIn" title="" target=""><span class="lightbox-zoom zoom-3 zoom-link" style="position:absolute; display: none;">&nbsp;</span><img src="https://steppingstonescri.net/wp-content/uploads/2016/05/Fix-My-DWI-Logo.jpg" alt='' class="attachment-fadeIn" /></a></div>
-</div>
-<p><strong>Dependable</strong></p>
-<p>We are committed to providing needed services for those who have received a DWI.</p>
-</div>
-<div class="one_third_last tt-column">
-<div class="modern_img_frame modern_three_col_large tt_">
-<div class="img-preload lightbox-img"><a href="#" class="attachment-fadeIn" title="" target=""><span class="lightbox-zoom zoom-3 zoom-link" style="position:absolute; display: none;">&nbsp;</span><img src="https://steppingstonescri.net/wp-content/uploads/2019/02/a-better-life.jpg" alt='' class="attachment-fadeIn" /></a></div>
-</div>
-<p><strong>Personalized</strong></p>
-<p>We help those who want to achieve their goal of living a better life.</p>
-</div>
-<p><br class="clear" /></p>
-<div class="callout-wrap"><span><em><strong>You know you can if you get the chance&#8230;.Well HERE&#8217;S YOUR CHANCE!</strong></em></p>
-<p style="text-align: center;"><em><strong>Call us today at (919) 269-9300</strong></em></span></div>
-<p><!-- END callout-wrap --><br class="clear" /></p>
+
+
+
 </div></section>
 <section class="post-list">
   <div class="container">
@@ -339,46 +218,55 @@ Tri Care
       <h2>Recent Posts</h2>
       <p>Updates, events, and resources from Stepping Stones.</p>
     </div>
-    <div class="post-grid">
+    <div class="post-slider" aria-label="Recent posts slider">
+      <div class="slider-track">
+        
     <article class="post-card">
       <h3><a href="/the-scoop-on-managing-stress/">The SCOOP on Managing Stress</a></h3>
-      <p></p>
+      <p>The SCOOP on Managing Stress</p>
     </article>
     <article class="post-card">
       <h3><a href="/today-we-celebrate-juneteenth/">Today We Celebrate Juneteenth</a></h3>
-      <p>[vc_row][vc_column][vc_custom_heading text=&#8221;Juneteenth Celebrates the End of Slavery in the United States 155 Years Ago Today&#8221; font_container=&#8221;tag:h2|text_align:center|color:%2381d742&#8243; google_fonts=&#8221;font_family:Droid%20Sans%3Aregular%2C700|font_style:700%20bold%20regular%3A700%3Anormal&#8221;][vc_column_text]
-It is also known as Emancipation Day, Juneteenth Independence Day, and Black Independence Day. On June 19, 1865, Major General Gordon Granger arrived in Galveston, TX, and announced the end of the Civil War and the end of slavery. Although the Emancipation Proclamation came 2½ years earlier on January 1, 1863, many slave owners continued to hold their slaves captive after the announcement, &#8230;</p>
+      <p>It is also known as Emancipation Day, Juneteenth Independence Day, and Black Independence Day.</p>
     </article>
     <article class="post-card">
       <h3><a href="/information-concerning-alcohol-and-driving-while-impaired/">Information Concerning Alcohol and Driving While Impaired</a></h3>
-      <p>There are five levels of misdemeanor Driving While Intoxicated. Level I is the most serious and Level V the least.
-Level V
-Punishable by a fine up to $200 and a minimum jail sentence of 24 hours and a maximum of 60 days. A judge can suspend the sentence but upon completion that the driver spend 24 hours in jail, perform 24 hours of community service or not operate a vehicle for 30 days.
-Level IV
-Punishable by a &#8230;</p>
-    </article></div>
+      <p>There are five levels of misdemeanor Driving While Intoxicated. Level I is the most serious and Level V the least.</p>
+    </article>
+      </div>
+    </div>
   </div>
 </section></main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div>
+    <div class="footer-brand">
       <h4>Stepping Stones Community Resources, Inc.</h4>
       <p>Call (919) 269-9300</p>
     </div>
-    <div class="footer-links"><a href="/the-scoop-on-managing-stress/">The SCOOP on Managing Stress</a><a href="/the-scoop-on-managing-stress/">...</a><a href="/today-we-celebrate-juneteenth/">Today We Celebrate Juneteenth</a><a href="/today-we-celebrate-juneteenth/">It is also known as Emancipation Day, Juneteenth Independence Day, and Black Independence Day. On June 19, 1865, Major Gene...</a><a href="/information-concerning-alcohol-and-driving-while-impaired/">Information Concerning Alcohol and Driving While Impaired</a><a href="/information-concerning-alcohol-and-driving-while-impaired/">There are five levels of misdemeanor Driving While Intoxicated. Level I is the most serious and Level V the least.
-Level V...</a><a href="/know-the-effect-of-peer-presence/">Know! The Effect of Peer Presence</a><a href="/know-the-effect-of-peer-presence/">NC Parent Resource Center
-brings you
-
-Know!
-Talking regularly with kids about the dangers of alcohol,
-tobacco and ...</a><a href="/stepping-stones-attends-the-nc-substance-abuse-prevention-conference/">Stepping Stones attends the NC Substance Abuse Prevention Conference</a><a href="/stepping-stones-attends-the-nc-substance-abuse-prevention-conference/">Stepping Stones Community Resources exhibited and attended the 13 Annual North Carolina Substance Abuse Prevention Conference...</a><a href="/stepping-stones-attends-the-wilson-nc-recovery-rally/">Stepping Stones attends the Wilson NC Recovery Rally</a><a href="/stepping-stones-attends-the-wilson-nc-recovery-rally/">On Saturday, September 10, 2016, Stepping Stones Community Resources, Inc. attended the Wilson NC, Recovery Rally to show su...</a><a href="/stepping-stones-community-resources-karlesia-montague-has-written-an-article-in-the-field-of-mental-health/">Stepping Stones Community Resources Karlesia Montague has written an article in the field of Mental Health</a><a href="/stepping-stones-community-resources-karlesia-montague-has-written-an-article-in-the-field-of-mental-health/">Press Release Karlesia Montague
-
-Article: Counselor Training in Suicide Assessment, Prevention, and Management
-
-
-
-&nbs...</a><a href="/stepping-stones-community-resources-dwi-services/">Stepping Stones Community Resources DWI Services</a><a href="https://steppingstonescri.net/feed/">RSS</a><a href="https://twitter.com/SSCRINC">Twitter</a><a href="https://www.facebook.com/Stepping-Stones-Community-Resources-1140917805972688/?fref=ts">Facebook</a><a href="https://www.youtube.com/channel/UCHDv_f87eathtD_jpIuYIIw">YouTube</a><a href="https://www.linkedin.com/in/stepping-stones-community-resources-inc-b35710126">LinkedIn</a><a href="https://plus.google.com/+SteppingStonesCommunityResourcesIncWilson/about">Google+</a></div>
+    <div class="footer-grid">
+      
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul><li><a href="/individual-counseling/">Individual Outpatient Therapy</a></li><li><a href="/sacot/">Substance Abuse Counseling Outpatient Treatment</a></li><li><a href="/saiop/">Substance Abuse Intensive Outpatient Program</a></li><li><a href="/case-management/">Case Management</a></li><li><a href="/primary-care/">Primary Care</a></li><li><a href="/dwi/">DWI Services</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul><li><a href="/stakeholder-surveys/">Stakeholder Surveys</a></li><li><a href="/our-listings/">Our Listings</a></li><li><a href="/persons-served-rights-committee/">Human Rights Committee</a></li><li><a href="/notices/">Operational Information</a></li><li><a href="/press-releases/">Press Releases</a></li><li><a href="/substance-abuse-and-mental-health-information/">Substance Abuse and Behavioral/Mental Health Information</a></li><li><a href="/spreading-seeds/">Spreading Seeds</a></li><li><a href="/healthy-start-medical-transportation/">Healthy Start Medical Transportation</a></li><li><a href="/events/">Events</a></li><li><a href="/newsletter/">Newsletter</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Posts</h4>
+      <ul><li><a href="/the-scoop-on-managing-stress/">The SCOOP on Managing Stress</a></li><li><a href="/today-we-celebrate-juneteenth/">Today We Celebrate Juneteenth</a></li><li><a href="/information-concerning-alcohol-and-driving-while-impaired/">Information Concerning Alcohol and Driving While Impaired</a></li><li><a href="/know-the-effect-of-peer-presence/">Know! The Effect of Peer Presence</a></li><li><a href="/stepping-stones-attends-the-nc-substance-abuse-prevention-conference/">Stepping Stones attends the NC Substance Abuse Prevention Conference</a></li><li><a href="/stepping-stones-attends-the-wilson-nc-recovery-rally/">Stepping Stones attends the Wilson NC Recovery Rally</a></li><li><a href="/stepping-stones-community-resources-karlesia-montague-has-written-an-article-in-the-field-of-mental-health/">Stepping Stones Community Resources Karlesia Montague has written an article in the field of Mental Health</a></li><li><a href="/stepping-stones-community-resources-dwi-services/">Stepping Stones Community Resources DWI Services</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Archives</h4>
+      <ul><li><a href="/category/clean-web-design/">Clean Web Design</a></li><li><a href="/category/premium-wordpress-themes/">Premium WordPress Themes</a></li><li><a href="/category/premium-wordpress-theme/">premium-wordpress-theme</a></li><li><a href="/category/press-releases/">Press Releases</a></li><li><a href="/category/uncategorized/">Uncategorized</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Other Pages</h4>
+      <ul><li><a href="/substance-abusemental-health-contact/">Substance Abuse and Behavioral/Mental Health  – Request An Appointment</a></li><li><a href="/business-contact/">Business Contact</a></li><li><a href="/">Home</a></li><li><a href="/accepted-insurance/">Payment Options</a></li><li><a href="/careers/">Careers</a></li><li><a href="/location/">Location</a></li><li><a href="/dwi-2/">DWI Services – Request An Appointment</a></li><li><a href="/ged/">GED Services</a></li><li><a href="/behavioral-mental-health/">Behavioral/Mental Health</a></li><li><a href="/substance-abuse/">Substance Abuse</a></li><li><a href="/clinicians/">Clinicians</a></li><li><a href="/counselors/">Facilitators</a></li><li><a href="/case-managers/">Case Managers</a></li><li><a href="/medical-records-staff/">Medical Records</a></li><li><a href="/history/">History</a></li><li><a href="/mission/">Mission</a></li><li><a href="/strategic-plan-2025-2026/">Strategic Plan 2025-2026</a></li><li><a href="/strategic-plan-2023-24/">STRATEGIC PLAN 2023-24</a></li><li><a href="/support/">IT Support</a></li><li><a href="/primary-care-support-staff/">Primary Care – Support Staff</a></li><li><a href="/primary-care-request-an-appointment/">Primary Care – Request An Appointment</a></li><li><a href="/primary-care-payment-options/">Primary Care – Payment Options</a></li><li><a href="/primary-care-services/">Primary Care – Services</a></li><li><a href="/primary-care-location-office-hours/">Primary Care – Location & Office Hours</a></li><li><a href="/individual-outpatient-therapy-request-an-appointment/">Individual Outpatient Therapy – Request An Appointment</a></li><li><a href="/comprehensive-clinical-assessment/">Comprehensive Clinical Assessment</a></li><li><a href="/general-information-contact/">General Information Contact</a></li><li><a href="/ged-4/">GED</a></li><li><a href="/dwi-3/">DWI</a></li><li><a href="/ged-3/">GED Services – Request An Appointment</a></li><li><a href="/early-warning-signs-of-substance-abuse/">Early Warning Signs of Substance Abuse</a></li><li><a href="/signs-of-mental-health-problems/">Early Warning Signs of Behavioral/Mental Health Disorder</a></li></ul>
+    </div>
+    </div>
   </div>
 </footer>
   <script src="/assets/site.js" defer></script>
